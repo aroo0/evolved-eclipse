@@ -3,12 +3,23 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
-body {
-	font-family: Verdana, sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+	font-family: 'Kantumruy Pro', sans-serif;
+
+
+}
+main {
 	margin: auto;
 	padding: 20px;
-	max-width: 65ch;
-	text-align: left;
+	max-width: 70ch;
 	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -26,7 +37,7 @@ b {
 	color: #222;
 }
 a {
-	color: #3273dc;
+	color: #494a4a;
 }
 nav a {
 	margin-right: 10px;

@@ -1,25 +1,45 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
+import Subscribe from './Subscribe.astro';
 ---
 
 <header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
+	<div class='header__container'>
+		<a class='header__logo header__nav-links' href="/">{SITE_TITLE}</a>
+	<nav class='header__main-nav'>
 		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
+		<HeaderLink href="/projects-writings">Project/Writings</HeaderLink>
+		<HeaderLink href="/projects-writings">Subscribe</HeaderLink>
+		<a  class='header__nav-links' href="https://www.w3schools.com">Twitter.</a>
+
+
 	</nav>
+	</div>
 </header>
 <style>
-	header {
-		margin: 0em 0 2em;
+	.header__container {
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 100ch;
+		margin: 1rem auto;
+
+
+
 	}
-	h2 {
-		margin: 0.5em 0;
+	.header__logo {
+		
+	}
+
+	.header__nav-links {
+		text-decoration: none;
+	}
+
+	.header__main-nav {
+		display: flex;
+		gap: 0.4rem
 	}
 </style>
