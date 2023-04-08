@@ -5,3 +5,27 @@ const today = new Date();
 <footer>
 	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
 </footer>
+<div class='footer__dog-container'><img class='footer__dog-background-image' src="/down-dogs.png" alt="doggies"></div>
+
+
+<style>
+
+	footer {
+		flex-shrink: 0;
+		
+		
+	}
+	.footer__dog-container {
+		position: relative
+
+	}
+
+	.footer__dog-background-image {
+		position: absolute;
+		bottom: 0;
+		left:0;
+		width: 400px;
+		height: auto;
+		z-index: -10;
+	}
+</style>

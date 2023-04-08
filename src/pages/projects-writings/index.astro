@@ -1,0 +1,125 @@
+---
+import Page from '../../layouts/Page.astro';
+import { projectWritingsData } from './data';
+import * as Icon from '@astropub/icons'
+
+
+
+
+const metaData = {
+  title: 'About me',
+  description: 'be written'
+}
+
+
+
+
+---
+<Page title={metaData.title} description={metaData.description}  >
+
+
+<div class='p-w__table'>
+	<div class='table__lang'>
+		<span class='table__headline cell row'>Lang</span>
+		<span class='table__row row-window cell row'>ALL</span>
+		<span class='table__row row-window cell row'>PL</span>
+		<span class='table__row row-window cell row'>EN</span>
+		<span class='table__background-cell cell'></span>
+	</div>
+	<div class='table__main'>
+
+		<div class="row">
+			<span class='table__headline row__title cell'><span class='table__h3'>Title</span>
+				<Icon.CaretSort size={16} /></span>
+			<span class='table__headline row__publisher cell'><span class='table__h3'>Publisher</span>
+				<Icon.CaretSort size={16} /></span>
+			<span class='table__headline row__type cell'><span class='table__h3'>Media</span>
+				<Icon.CaretSort size={16} /></span>
+			<span class='table__headline row__date cell'><span class='table__h3'>Date</span>
+				<Icon.CaretSort size={16} /></span>
+
+		</div>
+		{
+			projectWritingsData.map((project, index) => (
+			<div class="row">
+		
+						<span class='row__title row-window cell'>{project.title}</span>
+						<span class='row__publisher row-window cell'>{project.publisher}</span>
+						<span class='row__type row-window cell'>{project.type}</span>
+						<span class='row__date row-window cell '>{project.date}</span>
+			</div>
+			))
+		}
+	</div>
+</div>
+</Page>
+
+
+
+<style>
+
+
+	.wrapper {
+		max-width: 100ch;
+	}
+	
+
+
+	.p-w__table {
+		display: grid;
+		width: 100%;
+		grid-template-columns: 2fr 20fr;
+		font-size: .9rem;
+
+	}
+
+	.table__lang {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.row {
+		display: grid;
+		grid-template-columns: 3.5fr 1.6fr 1.3fr 1fr;
+		background-color: rgb(243, 243, 243);
+
+	}
+
+	.row:hover {
+		background-color: black;
+	}
+	
+
+	.table__headline {
+		background-color: #dcdcdc;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.table__h3 {
+		font-weight: 400;
+		font-size: 0.9rem;
+
+	}
+
+
+	.cell {
+		padding: 0.3rem 0.4rem;
+		
+	}
+
+
+
+
+	.table__background-cell {
+		background-color: #dcdcdc;
+		flex: 1;
+	}
+
+
+
+
+
+</style>

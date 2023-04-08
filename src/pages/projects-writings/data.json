@@ -1,0 +1,255 @@
+
+    [
+       {
+          "id":1,
+          "title":"Nick Land – Drapieżne Noumeny",
+          "publisher":"KRONOS",
+          "type":"Translation",
+          "date":"Forthcoming",
+          "url":"",
+          "lang":"pl"
+       },
+       {
+          "id":2,
+          "title":"Autumn Christian – Łabędzie szyje jak miecze",
+          "publisher":"papierwdole",
+          "type":"Translation",
+          "date":"Forthcoming",
+          "url":"",
+          "lang":"pl"
+       },
+       {
+          "id":3,
+          "title":"Arachnoeskapizm Kathy Acker. Esejorecenzja",
+          "publisher":"Stoner Polski",
+          "type":"Essay",
+          "date":"2023",
+          "url":"",
+          "lang":"pl"
+       },
+       {
+          "id":4,
+          "title":"The Future is Nowhere. Alienation, Autonomy & Suspended Futurisation of Poland",
+          "publisher":"Unsound",
+          "type":"Workshop",
+          "date":"2022",
+          "url":"",
+          "lang":"en"
+       },
+       {
+          "id":5,
+          "title":"0°DLL",
+          "publisher":"Biuro Literackie",
+          "type":"Poetry",
+          "date":"2022",
+          "url":"https://www.biuroliterackie.pl/biblioteka/utwory/0dll/",
+          "lang":"pl"
+       },
+       {
+          "id":6,
+          "title":"Rewolucja zaczyna się od rokoszu lemurów",
+          "publisher":"Biuro Literackie",
+          "type":"Interview",
+          "date":"2022",
+          "url":"https://www.biuroliterackie.pl/biblioteka/utwory/0dll/",
+          "lang":"pl"
+       },
+       {
+          "id":7,
+          "title":"Sprawność",
+          "publisher":"Stoner Polski",
+          "type":"Short Story",
+          "date":"2022",
+          "url":"",
+          "lang":"pl"
+       },
+       {
+          "id":8,
+          "title":"Automation and Catastrophe",
+          "publisher":"Plutonics :(::)",
+          "type":"Essay",
+          "date":"2021",
+          "url":"https://plutonicsjournal.com/volume-14/",
+          "lang":"en"
+       },
+       {
+          "id":9,
+          "title":"Nick Land – Pośpieszne wprowadzenie do akceleracjonizmu",
+          "publisher":"HOMAR",
+          "type":"Translation",
+          "date":"2021",
+          "url":"https://homar.blog/blog/aNmvlywczZNEFbjVkOC6",
+          "lang":"pl"
+       },
+       {
+          "id":10,
+          "title":"Akceleracjonizm – wprowadzenie",
+          "publisher":"Filozofia Tak Bardzo",
+          "type":"Talk",
+          "date":"2021",
+          "url":"https://www.youtube.com/live/LZ05D9pgw54?feature=share",
+          "lang":"pl"
+       },
+       {
+          "id":11,
+          "title":"Automatyka i katastrofa",
+          "publisher":"Stoner Polski",
+          "type":"Essay",
+          "date":"2021",
+          "url":"",
+          "lang":"pl"
+       },
+       {
+          "id":12,
+          "title":"<untitled>",
+          "publisher":"Strona Czynna",
+          "type":"Poetry",
+          "date":"2021",
+          "url":"https://www.yumpu.com/en/document/view/65873642/strona-czynna-7-21",
+          "lang":"pl"
+       },
+       {
+          "id":13,
+          "title":"Cybercafe",
+          "publisher":"Unsound",
+          "type":"Installation",
+          "date":"2021",
+          "url":"https://homar.blog/blog/NOFeenmyCOXGflfdtJVN",
+          "lang":"en"
+       },
+       {
+          "id":14,
+          "title":"Mark Fisher - k-punk, albo art pop dyskontinuum glampunku",
+          "publisher":"HOMAR",
+          "type":"Translation",
+          "date":"2020",
+          "url":"https://homar.blog/blog/iNPGjdOh5l6XBZJ0ZfBK",
+          "lang":"pl"
+       },
+       {
+          "id":15,
+          "title":"Luciana Parisi - Przeprogramowywanie Decyzjonizmu",
+          "publisher":"HOMAR",
+          "type":"Translation",
+          "date":"2020",
+          "url":"https://homar.blog/blog/21UbhbpoEOGLYYJuDryV",
+          "lang":"pl"
+       },
+       {
+          "id":16,
+          "title":"Co po krytyce? Kapitalizm i wyczerpanie teorii krytycznej. Cz. 1",
+          "publisher":"HOMAR",
+          "type":"Talk",
+          "date":"2020",
+          "url":"https://www.youtube.com/watch?v=MIuE0VX1JxY",
+          "lang":"pl"
+       },
+       {
+          "id":17,
+          "title":"Elektryczne Futro",
+          "publisher":"self-published",
+          "type":"Zine",
+          "date":"2019",
+          "url":"https://www.behance.net/gallery/96172933/elektryczne-futro-electric-fur-zine",
+          "lang":"pl"
+       },
+       {
+          "id":18,
+          "title":"Sadie Plant & Nick Land – Cyberdodatnie",
+          "publisher":"HOMAR",
+          "type":"Translation",
+          "date":"2019",
+          "url":"https://homar.blog/blog/MfYdfUYyIKecAD6CBEgZ",
+          "lang":"pl"
+       },
+       {
+          "id":19,
+          "title":"Syntetyczna Intymność",
+          "publisher":"Brutaż",
+          "type":"Club/Installation",
+          "date":"2019",
+          "url":"https://homar.blog/blog/seUhMFh7yvtprhWoLKcl",
+          "lang":"pl"
+       },
+       {
+          "id":20,
+          "title":"Outro Cuteness",
+          "publisher":"Galeria Arsenał",
+          "type":"Online Installation",
+          "date":"2018",
+          "url":"https://homar.blog/outrocuteness",
+          "lang":"en"
+       },
+       {
+          "id":21,
+          "title":"K-punk: Mark Fisher",
+          "publisher":"Unsound",
+          "type":"Reading group",
+          "date":"2018",
+          "url":"",
+          "lang":"en"
+       },
+       {
+          "id":22,
+          "title":"Xeno-sexuality arrives from the future",
+          "publisher":"HOMAR",
+          "type":"Manifesto",
+          "date":"2018",
+          "url":"https://homar.blog/manifesto/",
+          "lang":"en"
+       },
+       {
+          "id":23,
+          "title":"Na podwórka #2",
+          "publisher":"KRAKERS",
+          "type":"Installation",
+          "date":"2018",
+          "url":"",
+          "lang":"pl"
+       },
+       {
+          "id":24,
+          "title":"Overcoding capitalism. Accelerating appropriation",
+          "publisher":"UJ",
+          "type":"Conference Paper",
+          "date":"2016",
+          "url":"",
+          "lang":"en"
+       },
+       {
+          "id":25,
+          "title":"Culture is an arche-fossil",
+          "publisher":"Przegląd Kulturoznawczy",
+          "type":"Research Paper",
+          "date":"2016",
+          "url":"https://www.ejournals.eu/Przeglad-Kulturoznawczy/2016/Numer-3-29-2016/art/8540/",
+          "lang":"enpl"
+       },
+       {
+          "id":26,
+          "title":"Społeczeństwo wspólnej traumy",
+          "publisher":"AGH",
+          "type":"Research Paper",
+          "date":"2015",
+          "url":"https://www.academia.edu/30070622/SPO%C5%81ECZE%C5%83STWO_WSP%C3%93LNEJ_TRAUMY",
+          "lang":"pl"
+       },
+       {
+          "id":27,
+          "title":"Culture is an arche-fossil",
+          "publisher":"UJ",
+          "type":"Conference Paper",
+          "date":"2015",
+          "url":"en"
+       },
+       {
+          "id":28,
+          "title":"Orgia Pasoliniego",
+          "publisher":"Romanowicza 4",
+          "type":"Theatre",
+          "date":"2014",
+          "url":"",
+          "lang":"pl"
+       }
+    ]
+ 

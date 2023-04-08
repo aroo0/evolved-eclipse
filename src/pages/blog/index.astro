@@ -1,24 +1,20 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import Page from '../../layouts/Page.astro';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+
+
 );
+const metaData = {
+	title: 'Posts',
+	description: 'be written'
+}
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
+<Page title={metaData.title} description={metaData.description} >
 			<section>
 				<ul>
 					{
@@ -31,7 +27,4 @@ const posts = (await getCollection('blog')).sort(
 					}
 				</ul>
 			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+</Page>

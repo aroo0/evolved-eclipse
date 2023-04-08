@@ -4,27 +4,55 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-* {
-	box-sizing: border-box;
-}
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+:root {
+	--light: #f9f9f9;
+	--dark: #373638;
+  }
+  
+  
+
 
 html {
-	font-size: 18px;
-	font-family: 'Kantumruy Pro', sans-serif;
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+	height: 100%;
+	position: relative;
+	background-color: var(--light);
+	color: var(--dark);
+	/* background-image: url('/public/white-plaster-wall.jpg'); */
+	background-size: 500px;
 
 
 }
+
+body {
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: auto;
+	
+}
+
+
 main {
 	margin: auto;
-	padding: 20px;
-	max-width: 70ch;
-	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #444;
+    padding-bottom: 100px;
+	flex: 1;
+	max-width: 130ch;
+
 }
 h1,
 h2,
@@ -34,10 +62,17 @@ h5,
 h6,
 strong,
 b {
-	color: #222;
+	color:	var(--dark);
 }
 a {
-	color: #494a4a;
+	color: var(--dark);
+	text-decoration: underline;
+	text-underline-offset: 4px;
+
+}
+
+a:focus, a:hover {
+	text-decoration: none;
 }
 nav a {
 	margin-right: 10px;
@@ -76,3 +111,5 @@ blockquote {
 	margin: 0px;
 	font-style: italic;
 }
+
+

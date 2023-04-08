@@ -13,6 +13,7 @@
     "@astrojs/mdx": "^0.18.2",
     "@astrojs/rss": "^2.3.2",
     "@astrojs/sitemap": "^1.2.1",
+    "@astropub/icons": "^0.2.0",
     "astro": "^2.1.9",
     "astro-icon": "^0.8.0"
   }
