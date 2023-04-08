@@ -11,15 +11,15 @@
 
 
 :root {
-	--light: #f9f9f9;
-	--dark: #373638;
+	--light: #ffffff;
+	--dark: #000000;
   }
   
   
 
 
 html {
-	font-size: 14px;
+	font-size: 15px;
 	font-family: 'Poppins', sans-serif;
 	height: 100%;
 	position: relative;
@@ -112,4 +112,10 @@ blockquote {
 	font-style: italic;
 }
 
-
+h2 {
+	letter-spacing: 1px;
+	font-weight: 300;
+	font-size: 2rem;
+	margin: 0.5rem 0;
+	text-align: right;
+}

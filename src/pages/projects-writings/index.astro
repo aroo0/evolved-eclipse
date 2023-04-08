@@ -1,13 +1,13 @@
 ---
 import Page from '../../layouts/Page.astro';
 import { projectWritingsData } from './data';
-import * as Icon from '@astropub/icons'
+import * as Icon from '@astropub/icons';
 
 
 
 
 const metaData = {
-  title: 'About me',
+  title: 'Project/Writings',
   description: 'be written'
 }
 
@@ -20,10 +20,10 @@ const metaData = {
 
 <div class='p-w__table'>
 	<div class='table__lang'>
-		<span class='table__headline cell row'>Lang</span>
-		<span class='table__row row-window cell row'>ALL</span>
-		<span class='table__row row-window cell row'>PL</span>
-		<span class='table__row row-window cell row'>EN</span>
+		<span class='table__headline cell '>Lang</span>
+		<span class='table__row row-window cell row__element'>ALL</span>
+		<span class='table__row row-window cell row__element'>PL</span>
+		<span class='table__row row-window cell row__element'>EN</span>
 		<span class='table__background-cell cell'></span>
 	</div>
 	<div class='table__main'>
@@ -41,7 +41,7 @@ const metaData = {
 		</div>
 		{
 			projectWritingsData.map((project, index) => (
-			<div class="row">
+			<div class=" row row__element">
 		
 						<span class='row__title row-window cell'>{project.title}</span>
 						<span class='row__publisher row-window cell'>{project.publisher}</span>
@@ -69,7 +69,7 @@ const metaData = {
 		display: grid;
 		width: 100%;
 		grid-template-columns: 2fr 20fr;
-		font-size: .9rem;
+		font-size: 1rem;
 
 	}
 
@@ -81,32 +81,36 @@ const metaData = {
 	.row {
 		display: grid;
 		grid-template-columns: 3.5fr 1.6fr 1.3fr 1fr;
-		background-color: rgb(243, 243, 243);
+		/* background-color: rgb(243, 243, 243); */
 
 	}
 
-	.row:hover {
+	.row__element {
+		color: black
+
+	}
+
+	.row__element:hover {
 		background-color: black;
+		color: white
 	}
 	
 
 	.table__headline {
-		background-color: #dcdcdc;
-		text-transform: uppercase;
+		/* background-color: #dcdcdc; */
+		/* text-transform: uppercase; */
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	}
-
-	.table__h3 {
-		font-weight: 400;
-		font-size: 0.9rem;
+		color: rgb(140, 140, 140); ;
+		border-bottom: 1px  solid rgb(175, 175, 175);
 
 	}
 
 
 	.cell {
-		padding: 0.3rem 0.4rem;
+		padding: 0.4rem 0.4rem;
+		/* border: 2px solid rgb(255, 255, 255); */
 		
 	}
 
@@ -117,8 +121,6 @@ const metaData = {
 		background-color: #dcdcdc;
 		flex: 1;
 	}
-
-
 
 
 

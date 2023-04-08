@@ -1,0 +1,30 @@
+---
+const {heroImage} = Astro.props
+
+---
+
+<div class="hero-wrapper">
+    <img src={heroImage} alt="hero image" class="hero-image">
+  </div>
+
+<style>
+.hero-wrapper {
+  position: relative;
+  height: 400px;
+}
+
+.hero-image {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 100%;
+    object-fit: cover;
+}
+    </style>
+    
