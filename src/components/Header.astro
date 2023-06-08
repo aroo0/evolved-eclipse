@@ -6,67 +6,55 @@ import Subscribe from './Subscribe.astro';
 
 <header>
 	<div class='header__container'>
-		<a class='header__logo header__nav-links' href="/">{SITE_TITLE}</a>
+		<a class='header__logo' href="/">
+			<img src="/logo_black_crop.png" alt="logo">
+		</a>
 	<nav class='header__main-nav'>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/projects-writings">Project/Writings</HeaderLink>
-	</nav>
-		<nav class='header__social-nav'>
-		<HeaderLink href="/">Subscribe</HeaderLink>
-		<a href="https://www.w3schools.com">Twitter.</a>
-		
-
-
+		<HeaderLink class="nav_link" href="/blog">Blog</HeaderLink>
+		<HeaderLink class="nav_link" href="/about">About</HeaderLink>
+		<HeaderLink class="nav_link" href="/projects-writings">Project/Writings</HeaderLink>
+		<HeaderLink class="nav_link" href="/">Subscribe</HeaderLink>
+		<a class="nav_link" href="https://www.w3schools.com">Twitter.</a>
 	</nav>
 	</div>
 </header>
 <style>
 
-	header {
-		background-color: #fff;
-		position: sticky;
-		height: 40px;
-		top: 0;
-		transition: transform .25s ease;
-		z-index: 10;
-}
-
-
-
 	.header__container {
-		position: sticky;
-		bottom: 200px;
-		background-color: white;
-		z-index: 10;
 		display: flex;
-		gap: 2rem;
-		align-items: center;
+		gap: 1.8rem;
+		align-items: flex-start;
 		justify-content: space-between;
 		margin: 0.5rem auto;
-		max-width: 130ch;
-	
-
-
-
-
-
+		max-width: 95rem;
+		flex-wrap: wrap;
 	}
+
 	.header__logo {
-		letter-spacing: 1px;
-		font-size: 1.1rem;
-		
-
+		& img {
+			height: 102px;
+			width: 100%;
+		}
 	}
-
-	.header__nav-links {
-		text-decoration: none;
-	}
-
 	.header__main-nav {
 		display: flex;
-		gap: 1.3rem;
+		gap: 1.5rem;
 		flex-wrap: wrap;
-
 	}
+
+	.nav_link {
+		text-decoration: none;
+		text-transform: lowercase;
+		transition: text-decoration 1s ease-in-out;
+
+		&:hover {
+			text-decoration:underline;
+		}
+
+		&.active {
+			font-weight: bolder;
+			text-decoration:underline
+		}
+}
+
 </style>

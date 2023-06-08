@@ -5,9 +5,7 @@
  */
 
 
-
- @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@400;700&display=swap');
 
 
 :root {
@@ -19,15 +17,11 @@
 
 
 html {
-	font-size: 15px;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Inter', sans-serif;
 	height: 100%;
 	position: relative;
 	background-color: var(--light);
 	color: var(--dark);
-	/* background-image: url('/public/white-plaster-wall.jpg'); */
-	background-size: 500px;
-
 
 }
 
@@ -51,7 +45,7 @@ main {
 	line-height: 1.5;
     padding-bottom: 100px;
 	flex: 1;
-	max-width: 130ch;
+	max-width: 72rem;
 
 }
 h1,
@@ -110,12 +104,4 @@ blockquote {
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
-}
-
-h2 {
-	letter-spacing: 1px;
-	font-weight: 300;
-	font-size: 2rem;
-	margin: 0.5rem 0;
-	text-align: right;
 }

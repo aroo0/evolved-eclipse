@@ -1,24 +1,40 @@
 ---
 
+const {tag} = Astro.props
 ---
+<!-- <button class='tag' style={{ color: textColor, 'background-color': color }}>{tag}</button> -->
+<button class='tag'>{tag}</button>
+
 
 
 
 
 <style>
+
+    :root {
+	--light: #ffffff;
+	--dark: #000000;
+	--gray: #8c8c8c;
+  }
+  
+  
     .tag {
     all:unset;
     cursor: pointer;
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: 500;
-    border: 2px solid #000;
+    border: 2px solid var(--dark);
     border-radius: 5rem;
     padding: 0.5rem 1rem;
     margin: .2rem;
     transition:box-shadow .2s;
     z-index: 10;
-    background-color: rgba(245, 245, 245, 0.382);
     
 }
+
+button.tag:hover{
+    box-shadow: 3px 2px 0 0 #000;
+}
+
 
 </style>

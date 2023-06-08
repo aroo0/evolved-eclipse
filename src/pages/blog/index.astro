@@ -6,7 +6,6 @@ import Page from '../../layouts/Page.astro';
 const posts = (await getCollection('blog')).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 
-
 );
 const metaData = {
 	title: 'Posts',

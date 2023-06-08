@@ -1,14 +1,49 @@
 ---
+import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+
 import Page from '../layouts/Page.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const latestPosts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+
+);
+
+const lastPost = latestPosts[0]
 
 
 ---
 <Page title={SITE_TITLE} descirption={SITE_DESCRIPTION} >
-	<h1>🧑‍🚀 Hello, Astronaut!</h1>
-	<p>
-		Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-		template serves as a lightweight, minimally-styled starting point for anyone looking to build
-		a personal website, blog, or portfolio with Astro.
-	</p>
+
+	<div class="landing-posts">
+
+	<article class="last-post">
+		<div class="photo-wrapper">
+			<img src={lastPost.data.heroImage} alt="image from post">
+		</div>
+		<div class="content-container">
+			<div class="date">
+				<FormattedDate date={lastPost.data.pubDate} />
+			</div>
+			<h2>{lastPost.data.title}</h2>
+			<hr>
+			<div class="description">
+				{lastPost.data.description}
+			</div>
+
+
+
+		</div>
+	</article>
+
+	
+	<div class="landing-posts__other-posts">
+	<article class='other-post'>
+
+	</article>
+	</div>
+	</div>
+
 </Page>

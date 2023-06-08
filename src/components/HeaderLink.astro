@@ -13,9 +13,17 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 	<slot />
 </a>
 <style>
-	a {
+	.nav_link {
+		text-decoration: none;
+		text-transform: lowercase;
+
+	&:hover {
+		text-decoration:underline
 	}
-	a.active {
+
+	&.active {
 		font-weight: bolder;
+		text-decoration:underline
 	}
+
 </style>
