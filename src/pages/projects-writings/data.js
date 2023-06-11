@@ -223,7 +223,7 @@ export const projectWritingsData = [
        "type":"Research Paper",
        "date":"2016",
        "url":"https://www.ejournals.eu/Przeglad-Kulturoznawczy/2016/Numer-3-29-2016/art/8540/",
-       "lang":"enpl"
+       "lang":"en"
     },
     {
        "id":26,
@@ -240,7 +240,7 @@ export const projectWritingsData = [
        "publisher":"UJ",
        "type":"Conference Paper",
        "date":"2015",
-       "url":"en"
+       "lang":"en"
     },
     {
        "id":28,

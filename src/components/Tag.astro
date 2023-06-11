@@ -1,0 +1,40 @@
+---
+const {tag, colorClass} = Astro.props
+---
+<a class={`tag ${colorClass}`} href="" >{tag}</a>
+
+
+
+
+<style>
+
+    .tag {
+        font-size: .75rem;
+        text-decoration: none;
+        padding: .2rem .6rem;
+        border-radius: .6rem;
+        transition: color .2s ease-in-out;
+        transition: background-color .2s ease-in-out;
+
+
+        &.black {
+            color: #fff;
+            border: 1px solid #fff;
+
+
+            &:hover {
+                color: #000;
+                background-color: #fff;
+            }
+        }
+        &.white {
+            border: 1px solid #000;
+
+            &:hover {
+                color: #fff;
+                background-color: black;
+            }
+        }
+    }
+
+</style>

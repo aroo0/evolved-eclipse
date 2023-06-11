@@ -13,7 +13,7 @@ import Subscribe from './Subscribe.astro';
 		<HeaderLink class="nav_link" href="/blog">Blog</HeaderLink>
 		<HeaderLink class="nav_link" href="/about">About</HeaderLink>
 		<HeaderLink class="nav_link" href="/projects-writings">Project/Writings</HeaderLink>
-		<HeaderLink class="nav_link" href="/">Subscribe</HeaderLink>
+		<HeaderLink class="nav_link" href="/subscribe">Subscribe</HeaderLink>
 		<a class="nav_link" href="https://www.w3schools.com">Twitter.</a>
 	</nav>
 	</div>
@@ -21,12 +21,13 @@ import Subscribe from './Subscribe.astro';
 <style>
 
 	.header__container {
+		max-width: 95rem;
+		margin: 0.5rem auto;
+
 		display: flex;
 		gap: 1.8rem;
 		align-items: flex-start;
 		justify-content: space-between;
-		margin: 0.5rem auto;
-		max-width: 95rem;
 		flex-wrap: wrap;
 	}
 

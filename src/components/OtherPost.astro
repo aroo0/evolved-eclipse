@@ -1,0 +1,58 @@
+---
+import FormattedDate from '../components/FormattedDate.astro';
+import Tag from './Tag.astro';
+
+
+const {title, pubDate, description, tags} = Astro.props.data.data
+
+const slug = Astro.props.data.slug
+---
+
+<article class='other-post content-container'>
+    <div class="headline-container">
+    <span class="date">
+        <FormattedDate date={pubDate} />
+    </span>
+    <a href={`/blog/${slug}/`}><h3>{title}</h3></a>
+    </div>
+    <hr class='hr_title'>
+    <a href={`/blog/${slug}/`}><span class="description">
+        {description}
+    </span></a>
+    <div class='tags'>
+        {
+        tags.map((tag: string) => (
+        <Tag tag={tag} colorClass='white' />
+        ))}
+    </div>
+</article>
+
+
+<style>
+
+    .other-post {
+        padding: 2rem .2rem 2.4rem ;
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+
+        & .description {
+            font-size: .9rem;
+        }
+        & .headline-container {
+                    max-width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                }
+
+        & hr {
+            width: 11rem;
+            }
+            
+        & a {
+            text-decoration: none;
+        }
+    }
+
+
+</style>

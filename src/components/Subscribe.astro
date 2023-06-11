@@ -2,8 +2,38 @@
 
 ---
 
-<form class='header__subscribe'>
-    <input class="add-email" type="email" placeholder="Subscribe..." required >
-    <button type='submit'>Arrow</button>
+<div class='subscribe-container'>
+    <h2>Join newsletter (⁄ ⁄•⁄ω⁄•⁄ ⁄) </h2>
+<form class='subscribe'>
+    <input class="add-email" type="email" placeholder="Email" required >
+    <button class='button button--large' type='submit'>Subscribe</button>
 </form> 
+</div>
+
+
+<style>
+    .subscribe-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 3.75rem;
+
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.9rem;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid #000;
+        font-size: 1.25rem;
+        padding: .8rem 1rem;
+        width: clamp(8rem, 30vw, 40rem);
+
+    }
+</style>
 

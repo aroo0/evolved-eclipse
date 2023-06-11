@@ -13,7 +13,11 @@
 	--dark: #000000;
   }
   
-  
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
 
 html {
@@ -42,22 +46,35 @@ main {
 	margin: auto;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	line-height: 1.5;
     padding-bottom: 100px;
+	line-height: 1.5;
 	flex: 1;
-	max-width: 72rem;
+	max-width: 95rem;
 
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-	color:	var(--dark);
+
+
+
+h2, h3, h4 {
+	font-family: 'Lora', 'Times New Roman', Times, serif;
+	font-weight: 400;
 }
+
+h2 {
+	font-size: 1.9rem;
+	line-height: 120%;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+.date {
+	font-size: .75rem;
+}
+.helper-headline {
+	font-size: .9rem;
+}
+
 a {
 	color: var(--dark);
 	text-decoration: underline;
@@ -104,4 +121,44 @@ blockquote {
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
+}
+
+
+.tags {
+	display: flex;
+	gap: .5rem
+}
+
+.button {
+	background-color: #000000;
+	color: #fff;
+	border-radius: 3rem;
+	text-decoration: none;
+	line-height: .1;
+	border: 1px solid #000;
+	transition: color .1s ease-in-out;
+    transition: background-color .1s ease-in-out;
+
+	&:hover {
+		color: #000;
+		border: 1px solid #000;
+		background-color: white;
+
+	}
+}
+
+
+.button--small {
+	padding: .6rem .8rem;
+	font-size: .9rem;
+
+
+}
+
+.button--large {
+	padding: 2rem 4.2rem;
+	font-size:  1.5rem;
+	letter-spacing: 1px;
+
+
 }

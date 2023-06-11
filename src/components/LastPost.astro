@@ -1,0 +1,85 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+import Tag from "./Tag.astro";
+
+const {heroImage, title, pubDate, description, tags} = Astro.props.data
+
+---
+
+
+<article class="last-post">
+    <div class="photo-wrapper">
+        <img src={heroImage} alt="image from post">
+    </div>
+    <div class="content-container">
+        <div class="headline-container">
+        <span class="date">
+            <FormattedDate date={pubDate} />
+        </span>
+        <h2>{title}</h2>
+        </div>
+        <hr>
+        <span class="description">
+            {description}
+        </span>
+        <div class='tags'>
+            {
+            tags.map(tag => (
+                <Tag tag={tag} colorClass='black' />
+            ))}
+        </div>
+    </div>
+</article>
+
+
+<style>
+
+
+    .last-post {
+        position: relative;
+        color: white;
+        background-color: black;
+
+        & .content-container {
+            position: absolute;
+            background-color: black;
+            padding: 2.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            left: 100px;
+        }
+
+        & .headline-container{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: .4rem
+        }
+
+        
+
+    }
+    
+    .photo-wrapper {
+        width: 100%;
+        height: 30rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        & img {
+            height: auto; /* Ensure the image covers the full height of the container */
+            width: 100%; /* Allow the image to adjust its width proportionally */
+            
+        }
+
+    }
+
+    hr {
+        width: 45rem;
+    }
+
+
+</style>
