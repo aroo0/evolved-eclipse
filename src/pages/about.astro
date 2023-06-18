@@ -1,5 +1,10 @@
 ---
 import Page from "../layouts/Page.astro";
+import * as myPost from '../content/blog/first-post.md';
+import Subscribe from '../components/Subscribe.astro';
+
+console.log(myPost.frontmatter.title)
+
 const metaData = {
 	title: 'About me',
 	description: 'be written'
@@ -8,14 +13,97 @@ const metaData = {
 ---
 
 <Page title={metaData.title} description={metaData.description} >
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+	<div class="content-wrapper">
+		<div class="left-about">
+			<h4>Welcome to my island, <br>
+				Hope you like me, <br>
+				You ain't leaving</h4>
+		
+
+				<br>
+			<p> Once upon a time in a bustling city, there was a stray dog named Rusty who possessed an extraordinary spirit of adventure. With his scruffy appearance and mismatched eyes, he roamed the streets, seeking a life beyond the ordinary. Rusty's adventurous nature led him to discover a hidden treasure chest in an abandoned ship, which sparked his transformation into a pirate. Donning a makeshift eyepatch and a weathered tricorn hat, Rusty became the Knight of Modernity, sailing through the digital seas in search of knowledge and progress.</p>
+	
+			<p> Rusty's pirate persona didn't just represent a longing for excitement but also symbolized his fight for freedom. He rebelled against the constraints of society, determined to break free from the chains that held him back. With a crew of fellow misfits, he challenged the status quo and championed the cause of those without a voice. Rusty became a symbol of hope and liberation, a rallying point for those who believed in the power of change.</p>
+			
+			<p> As the Knight of Modernity, Rusty embarked on daring expeditions, exploring the uncharted realms of technology and innovation. He navigated the digital waves, unearthing new ideas and pushing the boundaries of what was deemed possible. Rusty's unwavering determination and fearless spirit inspired others to embrace progress and adapt to the ever-changing world around them. He stood tall as a beacon of resilience and adaptability, reminding everyone that they too could redefine their own destinies.</p>
+		
+			<p> In the end, Rusty, the stray dog turned pirate and knight, was more than just a whimsical character. He represented the indomitable spirit of freedom and the boundless potential that exists within each of us. Through his adventures, Rusty encouraged others to embrace their own inner rebels and explore the uncharted waters of life. In a world driven by conformity, Rusty reminded us that it is our unique qualities and unwavering pursuit of progress that truly make us modern-day knights of freedom.</p>
+		</div>
+		<div class="right-about">
+			<div class="socials-container">
+			<h4>Socials</h4>
+			<div class='links'>
+			<span>mail: rusty [at] dustymailbox [dot] com</span>
+			<span>twitter:  <a href="">@rustydust1</a></span>
+			<span>fb: <a href="">link</a></span>
+			</div>
+			<hr>
+			</div>
+			<div class="image-container">
+				<img src="/pyramid3.jpg" alt="b&w pyramid with fossils">
+			</div>
+
+	
+		</div>
+	
+	</div>
+	<Subscribe />
+	
+	
 
 </Page>
+
+<style>
+		.content-wrapper {
+		display: grid;
+		grid-template-columns: repeat(16, 1fr);
+		grid-template-rows: auto;
+		grid-auto-flow: row;
+		grid-gap: 0 2rem;
+		margin-bottom: 5rem
+	}
+
+	.left-about {
+		padding-top: 1rem;
+		grid-area: 1 / 3 / auto / span 7 ;
+
+	}
+
+	.right-about {
+		grid-area: 1 / 10 / auto / span 5 ;
+		padding: 1rem;
+		background-color: #000;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+
+
+
+		& .socials-container {
+			display: grid;
+			gap: .8rem;
+
+			& .links {
+				display: grid;
+				gap: .2rem
+
+			}
+		}
+
+		& .image-container {
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+		}
+
+		& hr {
+			max-width: 40%;
+		}
+
+		& a {
+			color: #fff;
+		}
+
+	}
+
+</style>

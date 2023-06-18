@@ -4,14 +4,15 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import Hero from '../components/Hero.astro';
 import { gray, background, main } from '../consts';
-import Button from '../components/Button.astro';
+import Tag from '../components/Tag.astro';
+import RelatedPosts from '../components/RelatedPosts.astro'
+import Subscribe from '../components/Subscribe.astro';
 
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.props;
+const { title, description, pubDate, coverImage, coverAlt, tags } = Astro.props;
 
 
 
@@ -27,29 +28,39 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 		<div class="container">
 		<Header />
 		<main>
-			<div class="hero-wrapper">
-				<img src={heroImage} alt="hero image" class="hero-image">
-			  </div>
+			<div class="cover-image">
+			<div class="image-wrapper">
+				<img src={coverImage} alt={coverAlt}>
+			</div>
+		</div>
 			<article>
-				<div class='article__tags'>
+				<div class='tags'>
 					{
 					tags.map(tag => (
-						<Button tag={tag} />
-					))}</div>
-				<div class='artice__date'>
-					<FormattedDate date={pubDate} />
+						<Tag tag={tag} colorClass='white' />
+					))}
 				</div>
-				<h1 class="article__headline">{title}</h1>
-				<div class='article__separator article__separator--long'></div>
-				<div class='article__description'>{description}</div>
-
-				
-				<div class='article__separator article__separator--short'></div>
+				<span class='date'><FormattedDate date={pubDate} /></span>
+				<h1 class="headline">{title}</h1>
+				<div class="share-links-container">
+					<span class="share-headline">Share</span>
+					<span class="share-link">Twitter</span>
+					<span class="share-link">Facebook</span>
+					<span class="share-link">Copy link</span>
+				</div>
+				<hr class='separator--long' />
+				<span class='description'>{description}</span>
+				<hr class='separator--short'>
 				<div class='content'>
-				<slot />
-			</div>
+					<slot />
+				</div>
 			</article>
+
+				<RelatedPosts tags={tags}/>
+
+				<Subscribe />
 		</main>
+		
 		<Footer />
 	</div>
 	</body>
@@ -64,69 +75,109 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
 	--gray: #8c8c8c;
   }
   
-  
-
-.hero-wrapper {
+.cover-image {
 	position:sticky;
-	top: 40px;
-    height: 500px;
-	width: 100%;
-}
-.hero-image {
-	position: absolute;
 	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	object-position: center;
-	object-fit: cover;
+	display: grid;
+	grid-template-columns: repeat(16, 1fr);
+	
+	& .image-wrapper {
+		grid-area: 1 / 3 / span 1 / 15;
+		display: flex;
+		height: 480px;
+		margin: auto;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+
+		& img {
+			
+			height: auto; /* Ensure the image covers the full height of the container */
+			width: 100%; /* Allow the image to adjust its width proportionally */	
+
+		}
+	} 
 }
+
 article {
     position: relative;
     z-index: 4;
-    opacity: 1;
 	display: grid;
-	gap: 1rem;
-	grid-template-columns: 3fr 5fr 3fr;
+	grid-template-columns: repeat(16, 1fr);
+	grid-template-rows: auto;
+	grid-auto-flow: row;
+	align-content: center;
+	grid-gap: .2rem 2rem;
 	background: var(--light);
+	margin-bottom: 5rem;
+
+
+		& .tags {
+			grid-area: 1 / 3 / span 1 / 12;
+			margin: .8rem 0
+
+		}
+
+		& .date {
+			grid-area: 2 / 3 / span 1 / 12
+		}
+
+
+		& .headline {
+			grid-area: 3 / 3 / span 1 / 12;
+
+			display: grid;
+			align-self: center;
+		}
+
+		& .share-links-container {
+			grid-area: 3 / 12 / span 1 / 15;
+			display: grid;
+			align-self: center;
+
+			& .share-headline {
+				font-size: .75rem;
+				margin-bottom: .2rem;
+				
+			}
+
+			& .share-link {
+				font-family: 'Lora', 'Times New Roman', Times, serif;
+				line-height: 139%;
+
+
+			}
+		}
+
+		& .separator--long {
+			grid-area: 4 / 3 / span 1 / 15;
+			margin-top: 1rem
+		}
+
+		& .description {
+			grid-area: 5/ 3 / span 1 / 14;
+			font-size: 1.4rem;
+			margin: 2rem 0
+		}
+
+		& .separator--short {
+			grid-area: 6 / 3 / span 1 / span 2;
+			margin: 1rem 0
+		}
+
+		& .content {
+			grid-area: 6 / 5 / span 2 / 12
+		}
+
+
+
+
+
 }
 
-.article__headline {
-	font-size: 2.2rem;
-	margin: .3rem 0;
-	grid-column: 1/3;
-
-}
-
-.article__description {
-	font-size: 1.4rem;
-	grid-column: 1/3;
-}
-
-.article__separator {
-	height: 1px;
-	background-color: var(--gray);
-    margin-bottom: 10px;
-    margin-top: 20px;
-    width: 100%;
-	z-index: 3;
-}
-
-.article__separator--long {
-	grid-column: 1 / 4
-
-}
 
 
-.article__separator-short {
-	grid-column: 1 / 2;
-
-}
-.content {
-	grid-column: 2 / 3;
-
-
-}
 
 
 </style>

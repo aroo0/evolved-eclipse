@@ -10,15 +10,17 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Subscribe from '../components/Subscribe.astro';
 
 
+import { Image } from 'astro:assets';
 
-const latestPosts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 
-);
 
-const [lastPost, secondPost, thirdPost, fourthPost, ...remainingPosts] = latestPosts
+// Assuming the `getCollection` function returns a Promise of an array of posts
+const latestPosts = await getCollection('blog');
+latestPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const {title, pubDate, description, tags, heroImage} = lastPost.data
+const [lastPost, secondPost, thirdPost, fourthPost, ...remainingPosts] = latestPosts;
+
+const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.data;
 
 ---
 <Page title={SITE_TITLE} descirption={SITE_DESCRIPTION} >
@@ -27,7 +29,7 @@ const {title, pubDate, description, tags, heroImage} = lastPost.data
 	<div class="landing-posts">
 		<span class="helper-headline latest-post-text">Latest Posts</span>
 		<div class="last-post__photo-wrapper">
-			<img src={heroImage} alt="image from post">
+			<img src={coverImage} alt={coverAlt}>
 		</div>
 		<div class="last-post__content-container">
 			<div class="headline-container">
