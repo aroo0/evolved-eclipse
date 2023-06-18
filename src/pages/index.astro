@@ -51,11 +51,9 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 		</div>
 
 		<section class="other-posts">
-		<OtherPost data={secondPost} />
-		<hr class="post-divider" />
-		<OtherPost data={thirdPost} />
-		<hr class="post-divider" />
-		<OtherPost data={fourthPost} />
+		<OtherPost data={secondPost} isItLastEl={false} />
+		<OtherPost data={thirdPost} isItLastEl={false}/>
+		<OtherPost data={fourthPost} isItLastEl={true} />
 	</section>
 	<span class="see-all-text"><a class='button button--small' href={`/blog`}>See all</a></span>
 </div>
@@ -136,9 +134,6 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 		grid-area: 23 / 3 / span 1 / 14;
 		margin: 2rem 0;
 
-		& .post-divider {
-			max-width: 45rem;
-		}
 	}
     
 

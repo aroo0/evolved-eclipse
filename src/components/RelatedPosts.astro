@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import OtherPost from "./OtherPost.astro";
+
+
+const allPosts = await getCollection('blog');
+
+const {tags, currentPostTitle} = Astro.props
+
+
+const filteredObjects = allPosts.filter(post => {
+  return tags.some(tag => post.data.tags.includes(tag)) && (post.data.title !== currentPostTitle) ;
+});
+
+
+---
+{
+    filteredObjects.slice(0, 3).map((post, index, array) => (
+        <OtherPost data={post} isItLastEl={index === array.length - 1}/>
+        
+    ))
+
+}
+
+
+
+
+<style>
+
+
+
+</style>

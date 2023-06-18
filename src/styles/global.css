@@ -20,6 +20,14 @@
 }
 
 
+li,
+ol,
+ul {
+	margin-left: .6rem;
+  	padding-left: .2rem;
+}
+
+
 html {
 	font-family: 'Inter', sans-serif;
 	height: 100%;
@@ -80,11 +88,33 @@ h4 {
 	font-weight: 500;
 }
 
-p {
-	line-height: 1.9;
-	margin-bottom: 1rem;
+h5 {
+	font-size: 1.2rem;
+	font-weight: 700;
 }
 
+h6 {
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+
+p {
+	line-height: 1.9;
+	margin: 1rem 0;
+}
+
+
+.article-content :is(h1, h2, h3, h4, h5, h6) {
+	margin: .6rem 0;
+	
+}
+
+
+
+li:has(p) > p {
+	margin: 0;
+  }
 .date {
 	font-size: .75rem;
 }
@@ -112,12 +142,8 @@ textarea {
 input {
 	font-size: 16px;
 }
-content {
-	line-height: 1.6;
-}
-table {
-	width: 100%;
-}
+
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -133,12 +159,40 @@ pre > code {
 	all: unset;
 }
 blockquote {
-	border: 1px solid #999;
+	border-left: 1px solid black;
 	color: #222;
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
 }
+
+
+
+figure {
+
+	&.larger-image {
+		margin-left: -15%;
+		width: 130% ;
+	}
+
+
+	& figcaption {
+		color: #3C3C3C;
+		font-size: .75rem;
+		padding-bottom: .6rem;
+		
+		&:after {
+			content: '';
+			display: block;
+			position: relative;
+			width: 7rem;
+			border-bottom: 1px solid black;
+			margin-top: .8rem;
+
+}}
+}
+
+
 
 
 .tags {
@@ -179,3 +233,30 @@ blockquote {
 
 
 }
+
+
+/* Table */
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+  }
+  
+  /* Styling for table headers */
+  th {
+	color: #4F4F4F;
+	font-size: .9rem;
+	font-weight: 400;
+	padding: .4rem;
+	border-bottom: 1px solid #000;
+  }
+  
+  /* Styling for table cells */
+  td {
+	padding: .6rem .4rem ;
+	font-size: .95rem;
+	font-family: 'Lora';
+
+  }
+  
