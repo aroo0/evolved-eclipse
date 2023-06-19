@@ -112,6 +112,7 @@ p {
 
 
 
+
 li:has(p) > p {
 	margin: 0;
   }
@@ -260,3 +261,85 @@ table {
 
   }
   
+
+.data-footnote-backref {
+	color: gray;
+	text-decoration: none;
+	font-size: .9rem;
+
+	&:hover {
+		color: black
+	}
+ }
+  
+sup :is(a)  {
+	color: gray;
+	text-decoration: none;
+	font-size: .7rem;
+
+
+	&:hover {
+		color: black
+	}
+
+
+	&:after {
+		content: ']';
+		
+
+	}
+
+	&:before {
+		content: '[';
+	}
+}
+
+
+.footnotes {
+	margin-top: 4rem;
+	font-size: .8rem;
+	color: #363636;
+
+	& #footnote-label {
+		display: none;
+	}
+
+	
+	&:before {
+		display: block;
+		content: "";
+		width: 14rem;
+		border-top: 1px solid black;
+		padding-bottom: 1.25rem;
+
+		  }
+	
+
+	& p {
+		line-height: 1.4
+	}
+
+
+	& ol {
+		list-style: none;
+		margin-left: .6em;
+	  
+		& li {
+		  counter-increment: custom;
+		  margin: .4rem 0;
+		  position: relative;
+	  
+		  &:before {
+			position: absolute;
+			left: -.6rem;
+			font-size: .7rem;
+			content: counter(custom) "";
+		  }
+	  
+		  &:first-child {
+			counter-reset: custom;
+		  }
+		}
+	  }
+}
+

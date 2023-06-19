@@ -10,12 +10,11 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Subscribe from '../components/Subscribe.astro';
 
 
-import { Image } from 'astro:assets';
 
-
+const latestPosts = await getCollection('blog', ({ data }) => {
+  return data.isDraft !== true; })
 
 // Assuming the `getCollection` function returns a Promise of an array of posts
-const latestPosts = await getCollection('blog');
 latestPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const [lastPost, secondPost, thirdPost, fourthPost, ...remainingPosts] = latestPosts;
@@ -51,9 +50,10 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 		</div>
 
 		<section class="other-posts">
-		<OtherPost data={secondPost} isItLastEl={false} />
-		<OtherPost data={thirdPost} isItLastEl={false}/>
-		<OtherPost data={fourthPost} isItLastEl={true} />
+		{secondPost && <OtherPost data={secondPost} isItLastEl={false}  />}
+		{thirdPost && <OtherPost data={thirdPost} isItLastEl={false}/>}
+		{fourthPost && <OtherPost data={fourthPost} isItLastEl={true}/>}
+
 	</section>
 	<span class="see-all-text"><a class='button button--small' href={`/blog`}>See all</a></span>
 </div>

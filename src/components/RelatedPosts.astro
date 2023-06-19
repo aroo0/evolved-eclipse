@@ -2,31 +2,27 @@
 import { getCollection } from "astro:content";
 import OtherPost from "./OtherPost.astro";
 
-
-const allPosts = await getCollection('blog');
-
-const {tags, currentPostTitle} = Astro.props
-
-
-const filteredObjects = allPosts.filter(post => {
-  return tags.some(tag => post.data.tags.includes(tag)) && (post.data.title !== currentPostTitle) ;
-});
-
+const {relatedPosts} = Astro.props
 
 ---
-{
-    filteredObjects.slice(0, 3).map((post, index, array) => (
+<span class="helper-headline">Related posts</span>
+
+{    relatedPosts.slice(0, 3).map((post, index, array) => (
         <OtherPost data={post} isItLastEl={index === array.length - 1}/>
         
     ))
-
 }
 
-
+<span class="see-all-text"><a class='button button--small' href={`/blog`}>See all</a></span>
 
 
 <style>
 
+.see-all-text {
+		display: flex;
+		justify-content: flex-end;
+		white-space: nowrap;
+	}
 
 
 </style>

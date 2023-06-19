@@ -11,12 +11,19 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.18.2",
+    "@astrojs/react": "^2.2.1",
     "@astrojs/rss": "^2.3.2",
     "@astrojs/sitemap": "^1.2.1",
     "@astropub/icons": "^0.2.0",
+    "@types/react": "^18.2.13",
+    "@types/react-dom": "^18.2.6",
     "astro": "^2.1.9",
     "astro-icon": "^0.8.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-footnote": "^3.0.3",
     "markdown-it-sup": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {

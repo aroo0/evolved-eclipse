@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -17,6 +18,16 @@ const { title, description, pubDate, coverImage, coverAlt, tags } = Astro.props;
 
 const url = Astro.url
 
+
+// Related Posts
+
+const allPosts = await getCollection('blog');
+
+const relatedPosts = allPosts.filter(post => {
+  return tags.some(tag => post.data.tags.includes(tag)) && (post.data.title !== title) && (post.data.isDraft !== true) ;
+});
+
+const isThereRelated = relatedPosts.length > 0 
 
 
 ---
@@ -71,11 +82,11 @@ const url = Astro.url
 				</div>
 			</article>
 			<aside>
-				<div class='related-posts-container'>
-				<span class="helper-headline">Related posts</span>
-				<RelatedPosts tags={tags} currentPostTitle={title}/>
-				<span class="see-all-text"><a class='button button--small' href={`/blog`}>See all</a></span>
-			</div>
+{ isThereRelated &&	<div class='related-posts-container'>
+
+					<RelatedPosts relatedPosts ={relatedPosts}/>
+
+				</div>}
 			<div class='subscribe-container'>
 				<Subscribe />
 			</div>
