@@ -5,8 +5,15 @@
 
 <script>
 	window.addEventListener('DOMContentLoaded', (event) => {
-	  new PagefindUI({ element: '#search', resetStyles: false});
-	});
+	  new PagefindUI({ 
+        element: '#search', 
+        resetStyles: false,
+        translations: {
+        placeholder: "yyyy... ( ͡°⊖ ͡°)",
+        zero_results: "Couldn't find [SEARCH_TERM]"
+    }
+});
+    });
 
     window.addEventListener('keydown', (event) => {
         if (event.key === '/' || event.key === '.') {
