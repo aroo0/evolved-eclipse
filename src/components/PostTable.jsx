@@ -75,7 +75,7 @@ export default function PostTable({ posts }) {
               <ul className="row-tags cell-tags">
                 {post.data.tags.map((tag) => (
                   <li key={tag} className="tag-in-post-table">
-                    <span className="tag-pseudo-link" onClick={() => handleTagAdd(tag)}>{tag}</span>
+                    <span className="tag-pseudo-link" onClick={() => handleTagAdd(tag)} data-pagefind-filter='tag'>{tag}</span>
                   </li>
                 ))}
               </ul>
