@@ -24,7 +24,7 @@
     
 
     // add the new results
-    for (const result of fiveResults) {
+    for (const result of fiveResults.results) {
       const data = await result.data()
       console.log(data)
       document.querySelector('#results').innerHTML += `
