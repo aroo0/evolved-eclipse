@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "postbuild": "pagefind --source dist --bundle-dir pagefind",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -28,6 +29,7 @@
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
-    "@fec/remark-a11y-emoji": "^3.1.0"
+    "@fec/remark-a11y-emoji": "^3.1.0",
+    "pagefind": "^0.12.0"
   }
 }

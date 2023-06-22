@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { formattedDate } from "../js/DateFunction";
 
+
 export default function PostTable({ posts }) {
   const [selectedTags, setSelectedTags] = useState([]);
+  
 
   useEffect(() => {
     // Extract the tag from the URL
