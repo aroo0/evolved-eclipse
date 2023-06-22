@@ -1,25 +1,33 @@
 ---
 
 ---
-<div id="search" class="ml-3 p-4 -mt-8"></div>
+<input id="search" type="text" placeholder="Search...">
 
-<script>
-	window.addEventListener('DOMContentLoaded', (event) => {
-	  new PagefindUI({ 
-        element: '#search', 
-        resetStyles: false,
-        translations: {
-        placeholder: "yyyy... ( ͡°⊖ ͡°)",
-        zero_results: "Couldn't find [SEARCH_TERM]"
+<div id="results" />
+
+<script is:inline>
+  document.querySelector('#search')?.addEventListener('input', async (e) => {
+    // only load the pagefind script once
+    if (e.target.dataset.loaded !== 'true') {
+      e.target.dataset.loaded = 'true'
+      // load the pagefind script
+      window.pagefind = await import("/pagefind/pagefind.js");
     }
-});
-    });
 
-    window.addEventListener('keydown', (event) => {
-        if (event.key === '/' || event.key === '.') {
-            console.log('you pressed the slash');
-            event.preventDefault();
-            document.querySelector('div#search input').focus();
-        }
-    });
+    // search the index using the input value
+    const search = await window.pagefind.search(e.target.value)
+
+    // clear the old results
+    document.querySelector('#results').innerHTML = ''
+
+    // add the new results
+    for (const result of search.results) {
+      const data = await result.data()
+      document.querySelector('#results').innerHTML += `
+        <a href="${data.url}">
+          <h3>${data.meta.title}</h3>
+          <p>${data.excerpt}</p>
+        </a>`
+    }
+  })
 </script>
