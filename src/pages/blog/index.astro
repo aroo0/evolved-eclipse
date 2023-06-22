@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Page from '../../layouts/Page.astro';
 import PostTable from '../../components/PostTable';
+import PageFind from '../PageFind.astro';
 
 
 const posts = (await getCollection('blog', ({ data }) => {
@@ -19,14 +20,15 @@ const metaData = {
 ---
 
 <Page title={metaData.title} description={metaData.description} >
+	<PageFind />
 
-<input id="search" type="text" placeholder="Search...">
+<!-- <input id="search" type="text" placeholder="Search...">
 
-<div id="results" />
+<div id="results" /> -->
 
 
 
-<script is:inline>
+<!-- <script is:inline>
   document.querySelector('#search')?.addEventListener('input', async (e) => {
     // only load the pagefind script once
     if (e.target.dataset.loaded !== 'true') {
@@ -52,7 +54,7 @@ const metaData = {
         </a>`
     }
   })
-</script>
+</script> -->
 
 	
 				<PostTable client:load posts={posts}>
