@@ -44,7 +44,7 @@ const isThereRelated = relatedPosts.length > 0
 		<main>
 			<div class="cover-image">
 			<div class="image-wrapper">
-				<img src={coverImage} alt={coverAlt}>
+				<img  data-pagefind-meta="image[src], image_alt[alt]" src={coverImage} alt={coverAlt}>
 			</div>
 		</div>
 			<article>
@@ -54,7 +54,7 @@ const isThereRelated = relatedPosts.length > 0
 						<Tag tag={tag} colorClass='white' />
 					))}
 				</div>
-				<span class='date' data-pagefind-ignore><FormattedDate date={pubDate} /></span>
+				<span class='date' data-pagefind-meta={`date${pubDate}`} data-pagefind-ignore><FormattedDate date={pubDate} /></span>
 				<h1 class="headline" >{title}</h1>
 				<div class="share-links-container" data-pagefind-ignore>
 					<span class="share-headline">Share</span>
