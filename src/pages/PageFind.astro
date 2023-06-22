@@ -6,24 +6,19 @@
 
 <script>
 	window.addEventListener('DOMContentLoaded', (event) => {
-	  new PagefindUI({ element: '#search', resetStyles: false});
+	  new PagefindUI({ 
+        element: '#search', 
+        resetStyles: true,
+        showImages: false,
+        translations: {
+        placeholder: "yyyy... ",
+        zero_results: "Couldn't find [SEARCH_TERM]"
+    }
+});
 	});
 
-    window.addEventListener('keydown', (event) => {
-        if (event.key === '/' || event.key === '.') {
-            console.log('you pressed the slash');
-            event.preventDefault();
-            document.querySelector('div#search input').focus();
-        }
-    });
 </script>
 
 <style is:global>
-	.dark {
-		--pagefind-ui-primary: #eeeeee;
-		--pagefind-ui-text: #eeeeee;
-		--pagefind-ui-background: #152028;
-		--pagefind-ui-border: #152028;
-		--pagefind-ui-tag: #152028;
-	}
+
 </style>
