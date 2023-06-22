@@ -49,7 +49,7 @@ export default function PostTable({ posts }) {
 
   return (
     <>
-    <div class="content-wrapper">
+    <div class="content-wrapper" data-pagefind-ignore>
     <div className="selected-tags-container tags">
         {selectedTags.map((tag) => (
           <span key={tag} className="selected-tag tag black-filled" onClick={() => handleTagRemove(tag)}>
