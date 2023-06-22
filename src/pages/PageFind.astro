@@ -15,14 +15,16 @@
     }
 
     // search the index using the input value
-    const search = await window.pagefind.search(e.target.value)
+    const search = await window.pagefind.debouncedSearch(e.target.value)
 
     // clear the old results
     document.querySelector('#results').innerHTML = ''
+    
 
     // add the new results
     for (const result of search.results) {
       const data = await result.data()
+      console.log(data)
       document.querySelector('#results').innerHTML += `
         <a href="${data.url}">
           <h3>${data.meta.title}</h3>
