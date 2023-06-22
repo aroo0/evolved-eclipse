@@ -16,7 +16,6 @@
 
     // search the index using the input value
     const search = await window.pagefind.debouncedSearch(e.target.value)
-    const fiveResults = await Promise.all(search.results.slice(0, 5).map(r => r.data()));
 
 
     // clear the old results
@@ -24,7 +23,7 @@
     
 
     // add the new results
-    for (const result of fiveResults.results) {
+    for (const result of search.results) {
       const data = await result.data()
       console.log(data)
       document.querySelector('#results').innerHTML += `
