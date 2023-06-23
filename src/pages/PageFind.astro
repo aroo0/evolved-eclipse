@@ -22,10 +22,14 @@
 <style is:global>
 
 #search {
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 
   & input {
     border: none;
@@ -36,7 +40,7 @@
   }
 
   & .pagefind-ui__result {
-    border-top: 1px solid #525252;
+    border-top: 1px solid #7f7f7f
     border-bottom: none;
   }
 
@@ -46,7 +50,7 @@
 
   }
 
-  & .pagefind-ui__result-title {
+  & .pagefind-ui__result-title, .pagefind-ui__result-link {
     color: #000000;
     font-family: 'Lora', serif;
     font-weight: 400;
