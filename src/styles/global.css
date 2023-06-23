@@ -466,17 +466,27 @@ sup :is(a)  {
 
 	}
 
-	.selected-tags-container {
-		grid-area: 1 / 3 /  span 1 / 14;
-		min-height: 2rem;
-		align-items: flex-start;
+	.blog-page-wrapper {
+		gap: 1.9rem 0;
+
+		.selected-tags-container {
+			grid-area: 2 / 3 /  span 1 / 15;
+			align-items: flex-start;
+	
+		}
+	
+		.post-table {
+			grid-area: 3 / 1 /  span 1 / 17;
+	
+		}
+	
+		#search {
+			grid-area: 1 / 3 /  span 1 / 15;
+	
+		}
 
 	}
 
-	.post-table {
-		grid-area: 2 / 1 /  span 1 / 17;
-
-	}
 
 
 

@@ -20,9 +20,13 @@ const metaData = {
 ---
 
 <Page title={metaData.title} description={metaData.description} >
+	<div class="content-wrapper blog-page-wrapper" data-pagefind-ignore>
+
 	<PageFind />
 
 	<PostTable client:load posts={posts}>
+	</div>
+
 
 </Page>
 
