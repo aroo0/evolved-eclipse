@@ -522,8 +522,14 @@ sup :is(a)  {
 				}
 			}
 
+		}
 
-
+		
+		& .headline-border {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			cursor: pointer;
 		}
 
 		& .project-cell-small {
@@ -538,7 +544,6 @@ sup :is(a)  {
 		}
 
 		& a {
-			text-decoration: none;
 
 			&:hover {
 				color: #6b6b6b;
