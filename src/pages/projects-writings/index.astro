@@ -1,9 +1,6 @@
 ---
 import Page from '../../layouts/Page.astro';
-import { projectWritingsData } from './data';
-import * as Icon from '@astropub/icons';
-
-
+import ProjectsTable from '../../components/ProjectsTable'
 
 
 const metaData = {
@@ -13,45 +10,14 @@ const metaData = {
 
 
 
-
 ---
 <Page title={metaData.title} description={metaData.description}  >
+	<div class="content-wrapper" data-pagefind-ignore>
+	<ProjectsTable client:load />
 
-
-<div class='p-w__table' data-pagefind-ignore>
-	<div class='table__lang'>
-		<span class='table__headline cell '>Lang</span>
-		<span class='table__row row-window cell row__element'>ALL</span>
-		<span class='table__row row-window cell row__element'>PL</span>
-		<span class='table__row row-window cell row__element'>EN</span>
-		<span class='table__background-cell cell'></span>
 	</div>
-	<div class='table__main'>
 
-		<div class="row">
-			<span class='table__headline row__title cell'><span class='table__h3'>Title</span>
-				<Icon.CaretSort size={16} /></span>
-			<span class='table__headline row__publisher cell'><span class='table__h3'>Publisher</span>
-				<Icon.CaretSort size={16} /></span>
-			<span class='table__headline row__type cell'><span class='table__h3'>Media</span>
-				<Icon.CaretSort size={16} /></span>
-			<span class='table__headline row__date cell'><span class='table__h3'>Date</span>
-				<Icon.CaretSort size={16} /></span>
 
-		</div>
-		{
-			projectWritingsData.map((project, index) => (
-			<div class=" row row__element">
-		
-						<span class='row__title row-window cell'>{project.title}</span>
-						<span class='row__publisher row-window cell'>{project.publisher}</span>
-						<span class='row__type row-window cell'>{project.type}</span>
-						<span class='row__date row-window cell '>{project.date}</span>
-			</div>
-			))
-		}
-	</div>
-</div>
 </Page>
 
 
@@ -59,69 +25,6 @@ const metaData = {
 <style>
 
 
-	.wrapper {
-		max-width: 100ch;
-	}
 	
-
-
-	.p-w__table {
-		display: grid;
-		width: 100%;
-		grid-template-columns: 2fr 20fr;
-		font-size: 1rem;
-
-	}
-
-	.table__lang {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.row {
-		display: grid;
-		grid-template-columns: 3.5fr 1.6fr 1.3fr 1fr;
-		/* background-color: rgb(243, 243, 243); */
-
-	}
-
-	.row__element {
-		color: black
-
-	}
-
-	.row__element:hover {
-		background-color: black;
-		color: white
-	}
-	
-
-	.table__headline {
-		/* background-color: #dcdcdc; */
-		/* text-transform: uppercase; */
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		color: #8c8c8c; ;
-		border-bottom: 1px  solid rgb(175, 175, 175);
-
-	}
-
-
-	.cell {
-		padding: 0.4rem 0.4rem;
-		/* border: 2px solid rgb(255, 255, 255); */
-		
-	}
-
-
-
-
-	.table__background-cell {
-		background-color: #dcdcdc;
-		flex: 1;
-	}
-
-
 
 </style>

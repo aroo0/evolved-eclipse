@@ -206,10 +206,9 @@ figure {
 			border-bottom: 1px solid black;
 			margin-top: .8rem;
 
-}}
+		}
+	}
 }
-
-
 
 
 .tags {
@@ -319,7 +318,6 @@ sup :is(a)  {
 	& #footnote-label {
 		display: none;
 	}
-
 	
 	&:before {
 		display: block;
@@ -328,7 +326,7 @@ sup :is(a)  {
 		border-top: 1px solid black;
 		padding-bottom: 1.25rem;
 
-		  }
+	}
 	
 
 	& p {
@@ -357,7 +355,7 @@ sup :is(a)  {
 		  }
 		}
 	  }
-}
+	}
 
 
 
@@ -407,9 +405,7 @@ sup :is(a)  {
 				& a {
 					text-decoration: none;
 				}
-
 			}
-
 		}
 
 		& .row-tags {
@@ -421,14 +417,11 @@ sup :is(a)  {
 				flex-wrap: wrap;
 				list-style-type: none;
 
-
 				& .tag-in-post-table {
 					&:not(:last-child):after {
 						content: ',';
 						margin-right: .4rem;
 					}
-
-				
 
 				& .tag-pseudo-link {
 					font-size: .85rem;
@@ -439,16 +432,10 @@ sup :is(a)  {
 					&:hover {
 						text-decoration: none;
 					}
-
-		
-
 				}
-				}
-		
-
-
-			
-		}}
+			}
+		}
+	}
 
 		& .row-date {
 			grid-area: 1 / 13 /  1 / 15;
@@ -488,6 +475,108 @@ sup :is(a)  {
 	}
 
 
+
+	/* Proejcts Table */
+
+
+
+
+
+	.project-table {
+		grid-area: 1 / 3 /  span 1 / 15;
+		display: grid;
+		grid-template-columns: 1fr 13fr;
+
+		& .project-writings-hr {
+			grid-area: 2 / 1 /  span 1 / 17;
+		}
+
+		& .table__lang {
+			grid-area: 1 / 1 /  span 1 / span 1;
+
+
+			& .headline {
+				color: #4F4F4F;
+				font-size: .9rem;
+				line-height: 2;
+
+
+			}
+
+			& .lang-list {
+				margin-top: .4rem;
+				display: grid;
+				grid-gap: 0.9rem 0;
+
+				& .lang-cell {
+					cursor: pointer;
+					transition: font-weight .1s ease-in-out;
+
+					&:hover {
+						color: #6b6b6b;
+					}
+
+					&.active {
+						font-weight: 600;
+					}
+				}
+			}
+
+
+
+		}
+
+		& .project-cell-small {
+			font-size: .95rem;
+		}
+
+		& .project-cell-title {
+			font-size: .95rem;
+			font-family: 'Lora';
+			line-height: 1.5;
+			
+		}
+
+		& a {
+			text-decoration: none;
+
+			&:hover {
+				color: #6b6b6b;
+			}
+
+		}
+		
+
+		}
+
+		& .table-main {
+			grid-area: 1 / 2 /  span 2 / span 1;
+
+
+			& .projects-row-title {
+				grid-area: 1 / 1 / span 1 / span 7
+
+			}
+
+			
+			& .projects-row-publisher {
+				grid-area: 1 / 8 / span 1 / span 3
+
+			}
+
+			& .projects-row-media {
+				grid-area: 1 / 11 / span 1 / span 3
+
+			}
+
+			& .projects-row-date {
+				grid-area: 1 / 14 / span 1 / span 3
+
+			}
+		}
+
+
+	
 
 
 
