@@ -1,0 +1,37 @@
+---
+import Page from "../layouts/Page.astro";
+import * as myPost from '../content/blog/first-post.md';
+import Subscribe from '../components/Subscribe.astro';
+
+console.log(myPost.frontmatter.title)
+
+const metaData = {
+	title: 'Subscribe',
+	description: 'be written'
+}
+
+---
+
+<Page title={metaData.title} description={metaData.description} >
+    <div class="content-wrapper">
+	<Subscribe />
+	
+	
+</div>
+</Page>
+
+<style>
+		.content-wrapper {
+		display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+		grid-template-rows: auto;
+		grid-auto-flow: row;
+		grid-gap: 0 2rem;
+		margin-bottom: 5rem
+	}
+
+
+
+</style>

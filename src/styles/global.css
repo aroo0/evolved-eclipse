@@ -39,10 +39,13 @@ html {
 
 body {
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .container {
-	display: flex;
+	display: grid;
 	flex-direction: column;
 	min-height: 100vh;
 	margin: auto;
@@ -57,6 +60,7 @@ main {
     padding-bottom: 100px;
 	line-height: 1.5;
 	width: 95rem;
+
 	
 
 }
@@ -543,14 +547,6 @@ sup :is(a)  {
 			
 		}
 
-		& a {
-
-			&:hover {
-				color: #6b6b6b;
-			}
-
-		}
-		
 
 		}
 
