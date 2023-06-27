@@ -34,6 +34,8 @@ html {
 	position: relative;
 	background-color: var(--light);
 	color: var(--dark);
+	overflow-y:scroll;
+
 
 }
 
@@ -43,6 +45,8 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 }
+
+
 
 .container {
 	display: grid;
