@@ -22,9 +22,12 @@
     "@types/react-dom": "^18.2.6",
     "astro": "^2.1.9",
     "astro-icon": "^0.8.0",
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
     "markdown-it": "^13.0.1",
     "markdown-it-footnote": "^3.0.3",
     "markdown-it-sup": "^1.0.0",
+    "postcss-nested": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark-gfm": "^3.0.1"

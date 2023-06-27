@@ -480,10 +480,7 @@ sup :is(a)  {
 
 
 
-	/* Proejcts Table */
-
-
-
+	/* Projects Table */
 
 
 	.project-table {
@@ -503,7 +500,6 @@ sup :is(a)  {
 				color: #4F4F4F;
 				font-size: .9rem;
 				line-height: 2;
-
 
 			}
 
@@ -525,9 +521,7 @@ sup :is(a)  {
 					}
 				}
 			}
-
 		}
-
 		
 		& .headline-border {
 			display: flex;
@@ -546,38 +540,28 @@ sup :is(a)  {
 			line-height: 1.5;
 			
 		}
-
-
-		}
-
-		& .table-main {
-			grid-area: 1 / 2 /  span 2 / span 1;
-
-
-			& .projects-row-title {
-				grid-area: 1 / 1 / span 1 / span 7
-
-			}
-
-			
-			& .projects-row-publisher {
-				grid-area: 1 / 8 / span 1 / span 3
-
-			}
-
-			& .projects-row-media {
-				grid-area: 1 / 11 / span 1 / span 3
-
-			}
-
-			& .projects-row-date {
-				grid-area: 1 / 14 / span 1 / span 3
-
-			}
-		}
+	}
 
 
 	
+		.projects-row-title {
+			grid-area: 1 / 1 / span 1 / span 7;
+
+				}
+				
+		.projects-row-publisher {
+			grid-area: 1 / 8 / span 1 / span 3;
+
+				}
+
+		.projects-row-media {
+			grid-area: 1 / 11 / span 1 / span 3;
+
+				}
+		.projects-row-date {
+			grid-area: 1 / 14 / span 1 / span 3;
+
+				}
 
 
 
