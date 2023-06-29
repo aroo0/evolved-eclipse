@@ -1,0 +1,46 @@
+---
+import Page from "../layouts/Page.astro";
+import Subscribe from '../components/SubscribeComponent.astro';
+import {Content, frontmatter} from '../info/about-data.md'
+
+const metaData = {
+	title: '404',
+	description: 'sth went wron'
+}
+
+---
+
+<Page title={metaData.title} description={metaData.description} >
+	<div class="content-wrapper">
+        <h1>bow wow</h1>
+        <p>404 Page not found</p>
+
+        <a href="/"><img src="/404.jpg" alt="sleeping dog"></a>
+	</div>
+
+	
+	
+
+</Page>
+
+<style>
+		.content-wrapper {
+        
+		display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+	}
+
+    h1 {
+        font-size: 6rem
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+	
+
+</style>
