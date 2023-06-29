@@ -1,7 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
-import Subscribe from './Subscribe.astro';
+import Subscribe from './SubscribeComponent.astro';
 ---
 
 <header>
@@ -17,7 +17,8 @@ import Subscribe from './Subscribe.astro';
 		<a class="nav_link" href="https://www.w3schools.com">Twitter.</a>
 	</nav>
 	</div>
-	<img  class='top-image' src="./Topfossil-min.png" alt="fosiil">
+	<img  class='top-image' src="/Topfossil-min.png" alt="fosiil">
+	<img  class='middle-image' src="/MiddleTower-min.png" width='350px' alt="fosiil">
 </header>
 <style>
 
@@ -60,10 +61,21 @@ import Subscribe from './Subscribe.astro';
 }
 
 
-.top-image {
-	position: absolute;
-	top: 0;
-	right: 0
-}
+	
+		.top-image {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		.middle-image {
+			position: absolute;
+			top: 33rem;
+			left: 0;
+			z-index: 100;
+		}
+		
+
+
 
 </style>

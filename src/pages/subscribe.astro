@@ -1,7 +1,7 @@
 ---
 import Page from "../layouts/Page.astro";
 import * as myPost from '../content/blog/first-post.md';
-import Subscribe from '../components/Subscribe.astro';
+import SubscribeComponent from '../components/SubscribeComponent.astro';
 
 console.log(myPost.frontmatter.title)
 
@@ -14,7 +14,7 @@ const metaData = {
 
 <Page title={metaData.title} description={metaData.description} >
     <div class="content-wrapper">
-	<Subscribe />
+	<SubscribeComponent />
 	
 	
 </div>
