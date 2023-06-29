@@ -97,6 +97,31 @@ const isThereRelated = relatedPosts.length > 0
 		
 		<Footer />
 	</div>
+	<div class="middle-image-container">
+	</div>
+	<div class="bottom-image-container">
+		<script defer>
+			window.addEventListener('DOMContentLoaded', function() {
+  			const targetElement = document.querySelector('.bottom-image-container'); 
+			function checkBodyWidth() {
+				const bodyHeight = document.body.clientHeight;
+				console.log(bodyHeight)
+				if (bodyHeight < 3200) {
+				targetElement.style.display = 'none';
+
+				} else {
+				targetElement.style.display = 'absolute';
+				}
+			}
+
+			checkBodyWidth(); // Check on page load
+
+			window.addEventListener('resize', function() {
+				checkBodyWidth(); // Check on window resize
+			});
+			});``
+		</script>
+	</div>
 	</body>
 </html>
 
@@ -230,10 +255,12 @@ aside {
 	grid-auto-flow: row;
 	grid-template-columns: repeat(16, 1fr);
 	background-color: #fff;
+	margin-bottom: 4rem;
+
 
 	& .related-posts-container {
 		grid-area: 1 / 3 / span 1 / 15;
-		margin-bottom: 5rem;
+		margin-bottom: 8rem;
 
 	}
 
@@ -253,6 +280,33 @@ aside {
 	}
 
 
+
+
+	.middle-image-container {
+		position: absolute;
+		top: 33rem;
+		left: 0;
+		z-index: 100;
+		background-image: url('/MiddleTower-min.png');
+		width: 300px;
+		height: 1658px;
+
+	}
+
+	
+	.bottom-image-container {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 100;
+		background-image: url('/bottom-tower-min.png');
+		width: 411px;
+		height: 1368px;
+
+	}
+
+
+	
 
 
 

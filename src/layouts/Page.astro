@@ -11,6 +11,8 @@ function generatePageTitle(title) {
 }
 
 
+console.log()
+
 ---
 
 <!DOCTYPE html>
@@ -18,7 +20,10 @@ function generatePageTitle(title) {
 	<head>
 		<BaseHead title={generatePageTitle(title)} description={description} />
 		<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-		<script src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
+		<script defer src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
+		<script defer src="src/js/middleImageSizeFunction.ts" type="text/javascript"></script>
+
+		
 	</head>
 
 	<body>
@@ -30,6 +35,8 @@ function generatePageTitle(title) {
 		</main>
 		<Footer />
 		</div>
+		<div class="middle-image-container">
+		</div>
 	</body>
 </html>
 
@@ -37,7 +44,17 @@ function generatePageTitle(title) {
 
 
 
-
 <style>
+
+	.middle-image-container {
+		position: absolute;
+		top: 33rem;
+		left: 0;
+		z-index: 100;
+		background-image: url('/MiddleTower-min.png');
+		width: 300px;
+		height: 200px
+
+	}
 
 </style>
