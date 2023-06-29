@@ -1,8 +1,8 @@
 ---
 email: 'rusty2 [at] dustymailbox [dot] com'
-twitterLink: 'twitter.com'
+twitterLink: 'http://twitter.com'
 twitterAcount: '@dustyrusty'
-facebook: 'facebook.com'
+facebook: 'http://facebook.com'
 description: 'Hi, I’m Patrick Leftwich, a researcher, writer and translator based in Cracow, Poland, and Minas Mongrel is my personal blog and website.'
 ---
 Hi, I’m Patrick Leftwich, a researcher, writer and translator based in Cracow, Poland, and Minas Mongrel is my personal blog and website.

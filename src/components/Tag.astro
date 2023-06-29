@@ -1,13 +1,9 @@
 ---
 const {tag, colorClass} = Astro.props
-
 const encodedTag = encodeURIComponent(tag);
 
 ---
 <a class={`tag ${colorClass}`} href={`/blog?tag=${encodedTag}`}>{tag}</a>
-
-
-
 
 <style>
 
@@ -19,7 +15,6 @@ const encodedTag = encodeURIComponent(tag);
         transition: color .2s ease-in-out;
         transition: background-color .2s ease-in-out;
 
-
         &.black {
             color: #fff;
             border: 1px solid #fff;
@@ -30,6 +25,7 @@ const encodedTag = encodeURIComponent(tag);
                 background-color: #fff;
             }
         }
+
         &.white {
             border: 1px solid #000;
 
