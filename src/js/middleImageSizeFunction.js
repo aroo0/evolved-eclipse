@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
-    const mainContainer = document.querySelector('main') as HTMLElement;
-    const graphicElement = document.querySelector('.middle-image-container') as HTMLElement;
+    const mainContainer = document.querySelector('main');
+    const graphicElement = document.querySelector('.middle-image-container');
 
     function updateHeight() {
         const mainHeight = mainContainer.offsetTop + mainContainer.offsetHeight;
