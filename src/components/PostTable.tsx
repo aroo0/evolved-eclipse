@@ -1,60 +1,66 @@
 import React, { useState, useEffect } from "react";
 import { formattedDate } from "../js/DateFunction";
 
+interface Post {
+  slug: string;
+  data: {
+    title: string;
+    tags: string[];
+    pubDate: Date;
+  };
+}
 
-export default function PostTable({ posts }) {
-  const [selectedTags, setSelectedTags] = useState([]);
-  
+interface PostTableProps {
+  posts: Post[];
+}
+
+export default function PostTable({ posts }: PostTableProps) {
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {
     // Extract the tag from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const tagParam = urlParams.get("tag");
     // Set the selected tag state
-    console.log(tagParam)
-    tagParam ? setSelectedTags([decodeURIComponent(tagParam)]) : [];
+    tagParam ? setSelectedTags([decodeURIComponent(tagParam)]) : setSelectedTags([]);
   }, []);
-  
-  
 
-   const handleTagAdd = (tag) => {
+  const handleTagAdd = (tag: string) => {
     // Check if the tag is already selected
     const isTagSelected = selectedTags.includes(tag);
 
     // Update the selected tags based on the click
     if (isTagSelected) {
-      return
+      return;
     } else {
       setSelectedTags([...selectedTags, tag]);
-
     }
   };
 
-  const handleTagRemove = (tag) => {
+  const handleTagRemove = (tag: string) => {
     // Check if the tag is already selected
     const isTagSelected = selectedTags.includes(tag);
 
     // Update the selected tags based on the click
     if (isTagSelected) {
       setSelectedTags(selectedTags.filter((selectedTag) => selectedTag !== tag));
-      return
+      return;
     } else {
-      return 
+      return;
     }
   };
 
-    // Filter the posts based on selected tags
-    const filteredPosts = selectedTags.length > 0 ? posts.filter((post) => selectedTags.every((tag) => post.data.tags.includes(tag))) : posts;
-
+  // Filter the posts based on selected tags
+  const filteredPosts = selectedTags.length > 0
+    ? posts.filter((post) => selectedTags.every((tag) => post.data.tags.includes(tag)))
+    : posts;
 
   return (
     <>
-    <div className="selected-tags-container tags">
+      <div className="selected-tags-container tags">
         {selectedTags.map((tag) => (
           <span key={tag} className="selected-tag tag black-filled" onClick={() => handleTagRemove(tag)}>
-            {tag}  &#128937;
-
-
+            {tag} &#128937;
           </span>
         ))}
       </div>
@@ -74,7 +80,13 @@ export default function PostTable({ posts }) {
               <ul className="row-tags cell-tags">
                 {post.data.tags.map((tag) => (
                   <li key={tag} className="tag-in-post-table">
-                    <span className="tag-pseudo-link" onClick={() => handleTagAdd(tag)} data-pagefind-filter='tag'>{tag}</span>
+                    <span
+                      className="tag-pseudo-link"
+                      onClick={() => handleTagAdd(tag)}
+                      data-pagefind-filter="tag"
+                    >
+                      {tag}
+                    </span>
                   </li>
                 ))}
               </ul>

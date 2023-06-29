@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import projectsData from '../pages/projects-writings/data.json';
+import projectsData from '../info/projects-data.json';
 import ArowIcon from './ArowIcon'
-import Styles from './styles.module.css'; // Use CSS Modules (must end in `.module.css`, `.module.scss`, or `.module.sass`!)
-
 
 interface Project {
   id: number;

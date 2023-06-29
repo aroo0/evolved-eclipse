@@ -2,26 +2,13 @@
 import Page from '../../layouts/Page.astro';
 import ProjectsTable from '../../components/ProjectsTable'
 
-
-
 const metaData = {
   title: 'Project/Writings',
   description: 'be written'
 }
-
-
-
 ---
 <Page title={metaData.title} description={metaData.description}  >
 	<div class="content-wrapper" data-pagefind-ignore>
 	<ProjectsTable client:load />
-
 	</div>
-
-
 </Page>
-
-
-
-<style>
-</style>
