@@ -33,6 +33,7 @@ html {
 	position: relative;
 	background-color: var(--light);
 	color: var(--dark);
+	overflow-x: hidden;
 
 
 }
@@ -49,11 +50,11 @@ body {
 }
 
 
-@media (max-width: 95rem) {
+@media (max-width: 93rem) {
 
 
-	body {
-		margin: 0 .8rem;
+	header {
+		margin: 0 2rem;
 	}
 
 }
@@ -75,12 +76,23 @@ main {
 	min-height: 66vh;
     padding-bottom: 80px;
 	line-height: 1.5;
-	max-width: 95rem;
+	max-width: 93rem;
 	min-height: 75vh;
 
 }
 
-@media (max-width: 950px) {
+
+
+@media (max-width: 93rem) {
+
+	main {
+		margin:  0 3rem;
+
+	}
+
+}
+
+@media (max-width: 1000px) {
 
 	main {
 		padding-top: calc(80px + 1rem)
@@ -110,31 +122,31 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: clamp(1.4rem, 3vw, 2.5rem);
 	line-height: 120%;
 }
 
 h2 {
-	font-size: 1.9rem;
+	font-size: clamp(1.3rem, 2.5vw, 1.9em);
 	line-height: 120%;
 }
 
 h3 {
-	font-size: 1.75rem;
+	font-size: clamp(1.2rem, 2.2vw, 1.75em);
 }
 
 h4 {
-	font-size: 1.4rem;
+	font-size: clamp(1.1rem, 2vw, 1.4em);
 	font-weight: 500;
 }
 
 h5 {
-	font-size: 1.2rem;
+	font-size: clamp(1.1rem, 2vw, 1.2em);
 	font-weight: 700;
 }
 
 h6 {
-	font-size: 1.1rem;
+	font-size: clamp(1rem, 1.8vw, 1.1em);
 	font-weight: 700;
 }
 
@@ -550,11 +562,12 @@ sup :is(a)  {
 	/* TAGS */
 
 	.tag {
-        font-size: .75rem;
+        font-size: clamp(.65rem, .6vw, .75rem);
         text-decoration: none;
+		white-space: nowrap;
 		cursor: pointer;
-        padding: .2rem .6rem;
-        border-radius: .6rem;
+        padding: .2em .6em;
+        border-radius: .6em;
         transition: color .2s ease-in-out;
         transition: background-color .2s ease-in-out;
 

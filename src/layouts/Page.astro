@@ -50,9 +50,9 @@ function generatePageTitle(title) {
 		</main>
 		<Footer />
 		</div>
-		<div class="middle-image-container">
-		</div>
 	</body>
+	<div class="middle-image-container">
+	</div>
 </html>
 
 
@@ -64,12 +64,34 @@ function generatePageTitle(title) {
 	.middle-image-container {
 		position: absolute;
 		top: 33rem;
-		left: 0;
+		left: 0px;
 		z-index: 100;
 		background-image: url('/MiddleTower-min.png');
 		width: 300px;
 		height: 200px
 
 	}
+
+
+	@media (max-width: 1500px) {
+			.middle-image-container {
+				left: -80px;
+			}
+		}
+
+		
+	@media (max-width: 1204px) {
+			.middle-image-container {
+				left: -120px;
+			}
+		}
+
+	@media (max-width: 1000px) {
+			.middle-image-container {
+				display: none;
+			}
+		}
+
+
 
 </style>
