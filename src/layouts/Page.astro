@@ -11,8 +11,6 @@ function generatePageTitle(title) {
 }
 
 
-console.log()
-
 ---
 
 <!DOCTYPE html>
@@ -30,7 +28,7 @@ console.log()
 				function updateHeight() {
 					const mainHeight = mainContainer.offsetTop + mainContainer.offsetHeight;
 					const graphicContainerHeight = mainHeight - 528;
-					graphicElement.style.height = `${graphicContainerHeight + 105}px`;
+					graphicElement.style.height = `${graphicContainerHeight + 80}px`;
 				}
 
 				// Initial call to update the height
@@ -45,7 +43,7 @@ console.log()
 
 	<body>
 
-		<div class="container">
+		<div>
 		<Header title={SITE_TITLE} />
 		<main>
             <slot />
