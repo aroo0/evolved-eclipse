@@ -86,7 +86,6 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 
     .last-post__content-container {
 			grid-area: 14 / 4 / span 9 / 16;
-
 			color: white;
             background-color: black;
             padding: 2.7rem;
@@ -131,9 +130,95 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 
 	.other-posts {
 		grid-area: 23 / 3 / span 1 / 14;
-		margin: 2rem 0;
+		margin: 1rem 0;
 
 	}
+
+
+	@media (max-width: 1000px) {
+
+		.latest-post-text {
+		grid-area: 1 / 1 / span 1 / span 6;
+		margin: .8rem;
+		padding: .2rem .7rem;
+		background-color: #fff;
+		border-radius: .8rem;
+		color: #000;
+		justify-self: left;
+		z-index: 1;
+	}
+
+		.last-post__photo-wrapper {
+		grid-area: 1 / 1 / span 14 / 17;
+		}
+
+		.last-post__content-container {
+			grid-area: 14 / 1 / span 9 / 17;
+		}
+
+		.other-posts {
+		grid-area: 23 / 2 / span 1 / 16;
+		margin: 2rem 0;
+		}
+
+		.see-all-text {
+		grid-area: 26 / 3 / span 1 / 16;
+
+	}
+
+
+}
+
+	
+	@media (max-width: 700px) {
+
+
+		.last-post__photo-wrapper {
+			height: 400px;
+		
+		}
+
+
+}
+
+	@media (max-width: 540px) {
+
+		.landing-posts {
+			grid-gap: initial
+		}
+		.last-post__content-container {
+			grid-area: 15 / 1 / span 9 / 17;
+			padding: 2rem 1rem;
+		}
+
+		.last-post__photo-wrapper {
+			height: 300px;
+
+		}
+
+		.other-posts {
+		grid-area: 25 / 1 / span 1 / 17;
+		margin: 1rem 1rem;
+		}
+
+		.see-all-text {
+		grid-area: 26 / 3 / span 1 / 17;
+		padding-right: 1rem;
+
+	}
+
+
+}
+
+
+@media (max-width: 400px) {
+	.last-post__photo-wrapper {
+			height: 200px;
+
+		}
+
+}
+
 
 
 </style>

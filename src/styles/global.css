@@ -163,7 +163,7 @@ li:has(p) > p {
 	font-size: .75rem;
 }
 .helper-headline {
-	font-size: .9rem;
+	font-size: clamp(.7rem, 1vw, .9rem);
 }
 
 a {
