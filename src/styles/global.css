@@ -89,7 +89,7 @@ main {
 @media (max-width: 1000px) {
 
 	main {
-		padding-top: calc(80px + 1rem)
+		padding-top: calc(80px)
 
 	}
 
