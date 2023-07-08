@@ -52,7 +52,7 @@ import {frontmatter} from '../info/about-data.md'
 	let prevScrollpos = window.scrollY;
 	window.onscroll = function() {
 		let currentScrollPos = window.scrollY;
-		if ((prevScrollpos < currentScrollPos) && (currentScrollPos > 250)) {
+		if ((prevScrollpos < currentScrollPos) && (currentScrollPos > 150)) {
 			header.style.top = "-95px";
 		} else {
 			header.style.top = "-0";
@@ -162,6 +162,7 @@ header {
 		width: 100%;
 		padding-right: 1rem;
 		height: 80px;
+		top: 0;
 
 
 	}
