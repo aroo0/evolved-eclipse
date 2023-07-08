@@ -50,14 +50,6 @@ body {
 }
 
 
-@media (max-width: 93rem) {
-
-
-	header {
-		margin: 0 2rem;
-	}
-
-}
 
 
 
@@ -83,14 +75,14 @@ main {
 
 
 
-@media (max-width: 93rem) {
+/* @media (max-width: 93rem) {
 
 	main {
 		margin:  0 3rem;
 
 	}
 
-}
+} */
 
 @media (max-width: 1000px) {
 
@@ -119,10 +111,11 @@ main {
 h1, h2, h3, h4 {
 	font-family: 'Lora', 'Times New Roman', Times, serif;
 	font-weight: 400;
+	
 }
 
 h1 {
-	font-size: clamp(1.4rem, 3vw, 2.5rem);
+	font-size: clamp(1.4rem, 4vw, 2.5rem);
 	line-height: 120%;
 }
 
@@ -181,9 +174,8 @@ a {
 a:focus, a:hover {
 	text-decoration: none;
 }
-nav a {
-	margin-right: 10px;
-}
+
+
 textarea {
 	width: 100%;
 	font-size: 16px;
@@ -220,6 +212,13 @@ figure {
 	&.larger-image {
 		margin-left: -15%;
 		width: 130% ;
+
+		@media (max-width: 550px) {
+			& {
+				margin-left: 0;
+				width: 100% ;
+			} 
+		}
 	}
 
 	& figcaption {
@@ -241,6 +240,7 @@ figure {
 
 .tags {
 	display: flex;
+	flex-wrap: wrap;
 	gap: .5rem
 }
 
@@ -268,8 +268,8 @@ figure {
 }
 
 .button--large {
-	padding: 2rem 4.2rem;
-	font-size:  1.5rem;
+	padding: 2em 4em;
+	font-size:  clamp(1rem, 2vw, 1.5rem);
 	letter-spacing: 1px;
 }
 

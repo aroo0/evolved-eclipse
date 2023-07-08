@@ -42,10 +42,20 @@ import {frontmatter} from '../info/about-data.md'
 </script>
 <style>
 
+@media (max-width: 93rem) {
+
+
+header {
+	/* padding: 0 1rem;
+	background-color: #fff; */
+}
+
+}
+
 	.header__container {
 		max-width: 93rem;
 		margin: 0 auto;
-		padding: 0.5rem 0;
+		padding: 0.5rem 1rem;
 		display: flex;
 		background-color: #fff;
 		gap: 1.8rem;
@@ -63,6 +73,7 @@ import {frontmatter} from '../info/about-data.md'
 			display: block;
 			width: auto;
 			height: 100%;
+			object-fit: contain;
 		}
 	}
 
@@ -71,12 +82,10 @@ import {frontmatter} from '../info/about-data.md'
     z-index: 100;
     cursor: pointer;
 	position: relative;
-	margin: auto 0;
+	margin: auto 1rem;
     width: 24px;
     height: 18px;
     pointer-events: all;
-	margin-right: 2rem;
-	padding-bottom: 2rem;
 
 
     & .bar,
@@ -114,10 +123,9 @@ import {frontmatter} from '../info/about-data.md'
 }
 
 
-
 	.header__main-nav {
 		display: flex;
-		gap: 1.5rem;
+		gap: 2rem;
 		flex-wrap: wrap;
 	}
 
@@ -127,7 +135,8 @@ import {frontmatter} from '../info/about-data.md'
 		.header__container {
 		position: fixed;
 		width: 100%;
-		padding-right: 1.5rem;
+		padding-right: 1rem;
+		height: 90px;
 
 
 	}
@@ -136,10 +145,11 @@ import {frontmatter} from '../info/about-data.md'
 		.header__main-nav {
 		align-items: flex-end;
 		position: fixed;
-		top: calc(80px + 1rem);
+		top: calc(80px);
 		right: 0;
 		width: 100%;
 		height: calc(100svh - 80px + 1rem);
+		z-index: 2000;
 		background-color: #fff;
 		gap: 1.5rem;
 		flex-direction: column;
@@ -162,7 +172,7 @@ import {frontmatter} from '../info/about-data.md'
 
 		
 	.header__logo {
-		height: 80px;
+		height: 70px;
 		}
 	}
 
@@ -183,6 +193,8 @@ import {frontmatter} from '../info/about-data.md'
 			text-decoration:underline
 		}
 }
+
+
 	
 		.top-image {
 			position: absolute;
