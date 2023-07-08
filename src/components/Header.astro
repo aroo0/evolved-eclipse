@@ -31,12 +31,13 @@ import {frontmatter} from '../info/about-data.md'
 
 
 	hamburgerMenu.addEventListener('click', () => {
+	const scrollY = window.scrollY;
+	
   	hamburgerMenu.classList.toggle('is-open')
 	navLinks.classList.toggle('hidden')
 	body.classList.toggle('fixed')
 
 	if (body.classList.contains('fixed')) {
-    const scrollY = window.scrollY;
     body.style.top = `-${scrollY}px`;
   	} else {
     const scrollY = parseInt(body.style.top || '0') * -1;
@@ -51,10 +52,10 @@ import {frontmatter} from '../info/about-data.md'
 	let prevScrollpos = window.scrollY;
 	window.onscroll = function() {
 		let currentScrollPos = window.scrollY;
-		if (prevScrollpos > currentScrollPos) {
-			document.querySelector(".header__container").style.top = "0";
+		if ((prevScrollpos < currentScrollPos) && (currentScrollPos > 200)) {
+			header.style.top = "-95px";
 		} else {
-			document.querySelector(".header__container").style.top = "-95px";
+			header.style.top = "-0";
 		}
 		prevScrollpos = currentScrollPos;
 		}
