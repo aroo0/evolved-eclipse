@@ -33,9 +33,31 @@ import {frontmatter} from '../info/about-data.md'
 	hamburgerMenu.addEventListener('click', () => {
   	hamburgerMenu.classList.toggle('is-open')
 	navLinks.classList.toggle('hidden')
-	body.classList.toggle('overflow')
-	header.classList.toggle('fixed')
+	body.classList.toggle('fixed')
+
+	if (body.classList.contains('fixed')) {
+    const scrollY = window.scrollY;
+    body.style.top = `-${scrollY}px`;
+  	} else {
+    const scrollY = parseInt(body.style.top || '0') * -1;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, scrollY);
+  		}
+
 	})
+
+
+	let prevScrollpos = window.scrollY;
+	window.onscroll = function() {
+		let currentScrollPos = window.scrollY;
+		if (prevScrollpos > currentScrollPos) {
+			document.querySelector(".header__container").style.top = "0";
+		} else {
+			document.querySelector(".header__container").style.top = "-95px";
+		}
+		prevScrollpos = currentScrollPos;
+		}
 
 
 
@@ -61,13 +83,15 @@ header {
 		gap: 1.8rem;
 		align-items: flex-start;
 		justify-content: space-between;
+		transition: top 0.3s; /* Transition effect when sliding down (and up) */
+		z-index: 1
+
 	}
 
 
 
 	.header__logo {
 		height: 108px;
-		flex-grow: 1;
 
 		& img {
 			display: block;

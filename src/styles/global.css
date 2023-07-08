@@ -45,8 +45,10 @@ body {
 	position: relative;
 }
 
-.overflow {
-    overflow: hidden;
+.fixed {
+	position: fixed;
+
+
 }
 
 

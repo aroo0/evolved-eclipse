@@ -142,11 +142,7 @@ const isThereRelated = relatedPosts.length > 0
 	z-index: -3;
 
 
-	@media (max-width: 1000px) {
-		& {
-		top: 96px;
-		}
-	}
+
 	
 	& .image-wrapper {
 		grid-area: 1 / 3 / span 1 / 15;
@@ -213,7 +209,7 @@ article {
 	grid-gap: .2rem 2rem;
 	background: var(--light);
 	padding-bottom: 5rem;
-	z-index: -1;
+	z-index: 0;
 
 
 		& .tags {
@@ -309,7 +305,7 @@ article {
 		@media (max-width: 1000px) {
 
 		& {
-			padding: .4rem 1rem 2rem;
+			padding: .4rem 2rem 2rem;
 		}
 			& .tags {
 			grid-area: 1 / 1 / span 1 / 17;
@@ -367,11 +363,11 @@ article {
 
 		}
 
-		@media (max-width: 550px) {
+		@media (max-width: 600px) {
 			& {
-				gap: .4rem
-			}
-
+				gap: .4rem;
+				padding: .4rem 1rem 2rem;
+				}
 
 		& .headline {
 			grid-area: 3 / 1 / span 1 / 17;
@@ -438,8 +434,8 @@ aside {
 	@media (max-width: 800px) {
 
 		& {
-			padding-left: 1rem;
-			padding-right: 1rem;
+			padding-left: 3rem;
+			padding-right: 3rem;
 
 		}
 
@@ -454,12 +450,16 @@ aside {
 		grid-area: 2 / 1 / span 1 / 17;
 
 	}
-
-
-		
 	}
 
+	@media (max-width: 600px) {
 
+		& {
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+		}
+	}
 }
 
 
