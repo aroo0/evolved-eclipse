@@ -42,9 +42,6 @@
     }
   }
 
-
-
-
   & input {
     border: none;
     border-bottom: 1px solid #757575;
@@ -52,6 +49,21 @@
     font-weight: 400;
     max-width: 50%;
   }
+
+  @media (max-width: 600px) {
+    & before {
+      left: 16%;
+    }
+
+    & button {
+      right: 15%;
+    }
+    & input {
+    max-width: 70%;
+    }
+  }
+
+
 
   & .pagefind-ui__result {
     border-top: 1px solid #f3f3f3;
