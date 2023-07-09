@@ -95,6 +95,7 @@ export default function PostTable({ posts }: PostTableProps) {
                   {formattedDate(post.data.pubDate)}
                 </time>
               </span>
+              <hr className='in-table-line'/>
             </li>
           ))}
         </ul>
