@@ -73,7 +73,7 @@ export default function ProjectsTable() {
     <>
       <div className='project-table' data-pagefind-ignore>
         <div className='table__lang'>
-          <div className='headline headline'>Lang</div>
+          <div className='headline'>Lang</div>
           <hr />
           <div className="lang-list">
             <span
@@ -143,6 +143,7 @@ export default function ProjectsTable() {
                 <span className='projects-row-publisher project-cell-small'>{project.publisher}</span>
                 <span className='projects-row-media project-cell-small'>{project.type}</span>
                 <span className='projects-row-date project-cell-small'>{project.date}</span>
+                <hr className='in-project-line'/>
               </li>
             ))}
           </ul>
