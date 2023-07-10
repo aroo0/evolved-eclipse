@@ -165,15 +165,18 @@ li:has(p) > p {
 	font-size: clamp(.8rem, 1vw, .9rem);
 }
 
-a, a:focus, a:active  {
+a {
 	color: var(--dark);
 	text-decoration: underline;
 	text-underline-offset: 4px;
 
 }
 
-a :hover {
-	text-decoration: none;
+
+@media (hover: hover) {
+	a :hover {
+		text-decoration: none;
+	}
 }
 
 
@@ -245,7 +248,7 @@ figure {
 	gap: .5rem
 }
 
-.button, .button:active, .button:focus {
+.button {
 	background-color: #000000;
 	color: #fff;
 	border-radius: 3rem;
@@ -256,11 +259,13 @@ figure {
     transition: background-color .1s ease-in-out;
 	font-weight: 400;
 
-	&:hover {
-		color: #000;
-		border: 1px solid #000;
-		background-color: white;
+	@media (hover: hover) {
 
+		&:hover {
+			color: #000;
+			border: 1px solid #000;
+			background-color: white;
+		}
 	}
 }
 
@@ -301,15 +306,16 @@ table {
   }
   
 
-.data-footnote-backref, 
-.data-footnote-backref:active, 
-.data-footnote-backref:focus {
+.data-footnote-backref {
 	color: gray;
 	text-decoration: none;
 	font-size: .9rem;
 
-	&:hover {
-		color: black
+	@media (hover: hover) {
+
+		&:hover {
+			color: black
+		}
 	}
  }
   
@@ -318,8 +324,11 @@ sup :is(a, a:active, a:focus)  {
 	text-decoration: none;
 	font-size: .7rem;
 
-	&:hover {
-		color: black
+	@media (hover: hover) {
+
+		&:hover {
+			color: black
+		}
 	}
 
 	&:after {
@@ -446,8 +455,11 @@ sup :is(a, a:active, a:focus)  {
 					text-underline-offset: 3px;
 					cursor: pointer;
 
-					&:hover {
-						text-decoration: none;
+					@media (hover: hover) {
+
+						&:hover {
+							text-decoration: none;
+						}
 					}
 				}
 			}
@@ -652,14 +664,15 @@ sup :is(a, a:active, a:focus)  {
 				display: grid;
 				grid-gap: 0.9rem 0;
 
-				& .lang-cell, 
-				  .lang-cell:active, 
-				  .lang-cell:focus {
+				& .lang-cell {
 					cursor: pointer;
 					transition: font-weight .1s ease-in-out;
 
-					&:hover {
-						color: #6b6b6b;
+					@media (hover: hover) {
+
+						&:hover {
+							color: #6b6b6b;
+						}
 					}
 
 					&.active {
@@ -885,20 +898,24 @@ sup :is(a, a:active, a:focus)  {
             color: #fff;
             border: 1px solid #fff;
 
-            &:hover {
-                color: #000;
-                background-color: #fff;
-            }
+			@media (hover: hover) {
+				&:hover {
+					color: #000;
+					background-color: #fff;
+				}
+			}
         }
         &.white, 
 		&.white:active, 
 		&.white:focus {
             border: 1px solid #000;
 
-            &:hover {
-                color: #fff;
-                background-color: black;
-            }
+			@media (hover: hover) {
+				&:hover {
+					color: #fff;
+					background-color: black;
+				}
+			}
         }
 
 		&.black-filled, 
@@ -908,10 +925,12 @@ sup :is(a, a:active, a:focus)  {
 			color: #fff;
 			background-color: #000;
 
-            &:hover {
-                color: #000;
-                background-color: #fff;
-            }
+			@media (hover: hover) {
+				&:hover {
+					color: #000;
+					background-color: #fff;
+				}
+			}
         }
     }
 
