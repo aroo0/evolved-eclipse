@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
 import Page from '../../layouts/Page.astro';
 import PostTable from '../../components/reactComponents/PostTable';
 import PageFind from '../../components/PageFind.astro';
@@ -11,7 +10,26 @@ const posts = (await getCollection('blog', ({ data }) => {
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
 
+interface Post {
+  slug: string;
+  data: {
+    title: string;
+    tags: string[];
+    pubDate: Date;
+  };
+}
 
+const filteredPosts: Post[] = posts.map(post => {
+  const filteredPost: Post = {
+    slug: post.slug,
+    data: {
+      title: post.data.title,
+      tags: post.data.tags,
+      pubDate: post.data.pubDate
+    }
+  };
+  return filteredPost;
+});
 
 const metaData = {
 	title: 'Posts',
@@ -21,13 +39,9 @@ const metaData = {
 
 <Page title={metaData.title} description={metaData.description} >
 	<div class="content-wrapper blog-page-wrapper" data-pagefind-ignore>
-
 	<PageFind />
-
-	<PostTable client:load posts={posts}>
+	<PostTable client:load posts={filteredPosts}>
 	</div>
-
-
 </Page>
 
 

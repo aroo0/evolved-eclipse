@@ -8,7 +8,7 @@ interface Project {
   publisher: string;
   type: string;
   date: string;
-  url: string;
+  url?: string;
   lang: string;
 }
 
