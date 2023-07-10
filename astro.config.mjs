@@ -7,7 +7,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://unrivaled-empanada-3b13a7.netlify.app/',
   integrations: [mdx(), sitemap(), react()],
   experimental: {
     assets: true
