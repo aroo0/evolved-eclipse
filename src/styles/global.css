@@ -548,10 +548,6 @@ sup :is(a, a:active, a:focus)  {
 
 		@media (max-width:430px) {
 
-			&.row-headline {
-				display: none;
-			}
-
 	
 			& .row-title {
 				grid-area: 2 / 1 / span  1 / 17;
@@ -587,6 +583,9 @@ sup :is(a, a:active, a:focus)  {
 		}
 	}
 
+
+
+
 	.blog-page-wrapper {
 		gap: 1.9rem 0;
 
@@ -597,6 +596,13 @@ sup :is(a, a:active, a:focus)  {
 	
 		& .post-table {
 			grid-area: 3 / 1 /  span 1 / 17;
+
+			@media (max-width:430px) {
+
+				& .row-headline {
+					display: none;
+				}
+			}
 		}
 	
 		& #search {
@@ -623,6 +629,8 @@ sup :is(a, a:active, a:focus)  {
 				& {
 					margin: 1rem;
 				}
+
+				
 
 	}
 }
