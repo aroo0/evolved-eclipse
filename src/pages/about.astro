@@ -2,6 +2,8 @@
 import Page from "../layouts/Page.astro";
 import Subscribe from '../components/SubscribeComponent.astro';
 import {Content, frontmatter} from '../info/about-data.md'
+import pyramid from '../assets/minas-mongrel-pyramid.webp'
+import { Image } from "astro:assets";
 
 const metaData = {
 	title: 'About',
@@ -26,7 +28,7 @@ const metaData = {
 			<hr>
 			</div>
 			<div class="image-container">
-				<img src="/minas-mongrel-pyramid.webp" alt="b&w pyramid with fossils">
+				<Image src={pyramid} alt="b&w pyramid with fossils" quality={'high'}>
 			</div>
 
 	

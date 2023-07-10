@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
 
 
 import Page from '../layouts/Page.astro';
@@ -28,7 +29,7 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 	<div class="landing-posts" data-pagefind-ignore>
 		<span class="helper-headline latest-post-text">Latest Posts</span>
 		<div class="last-post__photo-wrapper">
-			<img src={coverImage} alt={coverAlt}>
+			<Image  data-pagefind-meta="image[src], image_alt[alt]" src={coverImage} alt={coverAlt} width='1400' height='800'>
 		</div>
 		<div class="last-post__content-container">
 			<div class="headline-container">

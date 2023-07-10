@@ -8,13 +8,12 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Tag from '../components/Tag.astro';
 import RelatedPosts from '../components/RelatedPosts.astro'
 import Subscribe from '../components/SubscribeComponent.astro';
+import { Image } from 'astro:assets';
 
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, coverImage, coverAlt, tags } = Astro.props;
-
-
 const url = Astro.url
 
 
@@ -41,10 +40,13 @@ const isThereRelated = relatedPosts.length > 0
 		<main>
 			<div class="cover-image">
 			<div class="image-wrapper">
-				<img  data-pagefind-meta="image[src], image_alt[alt]" src={coverImage} alt={coverAlt}>
+				<Image  data-pagefind-meta="image[src], image_alt[alt]" src={coverImage} alt={coverAlt} width='1400' height='800'>
 			</div>
+			
 		</div>
+		
 			<article>
+				
 				<div class='tags' data-pagefind-ignore>
 					{
 					tags.map(tag => (
@@ -102,7 +104,7 @@ const isThereRelated = relatedPosts.length > 0
   			const targetElement = document.querySelector('.bottom-image-container'); 
 			function checkBodyWidth() {
 				const bodyHeight = document.body.clientHeight;
-				console.log(bodyHeight)
+				
 				if (bodyHeight < 3200) {
 				targetElement.style.display = 'none';
 
