@@ -29,7 +29,7 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 	<div class="landing-posts" data-pagefind-ignore>
 		<span class="helper-headline latest-post-text">Latest Posts</span>
 		<div class="last-post__photo-wrapper">
-			<Image  data-pagefind-meta="image[src], image_alt[alt]" src={coverImage} alt={coverAlt} width='1400' height='800'>
+			<Image  data-pagefind-meta="image[src], image_alt[alt]" src={coverImage} alt={coverAlt} width='1100' height='800' quality={'mid'} loading='eager'/>
 		</div>
 		<div class="last-post__content-container">
 			<div class="headline-container">
