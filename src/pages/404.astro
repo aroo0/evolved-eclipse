@@ -11,11 +11,11 @@ const metaData = {
 ---
 
 <Page title={metaData.title} description={metaData.description} >
-	<div class="content-wrapper">
-        <h1>bow wow</h1>
-        <p>404 Page not found</p>
+	<div class="content-wrapper error-page">
+        <h1 class="error-headline">bow wow</h1>
+        <p class="larger-pargh">404 Page not found</p>
 
-        <a href="/"><img src="/404.jpg" alt="sleeping dog"></a>
+        <div class="img-container"><a href="/"><img src="/dogo.jpg" alt="sleeping dog"></a></div>
 	</div>
 
 	
@@ -24,21 +24,29 @@ const metaData = {
 </Page>
 
 <style>
-		.content-wrapper {
+	.error-page {
         
 		display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin-bottom: 0;
+        column-gap: 1rem;
 	}
 
-    h1 {
-        font-size: 6rem
+    .error-headline {
+        font-size: clamp(3rem, 6vw, 6rem)
     }
 
-    p {
-        font-size: 2rem;
+    .larger-pargh {
+        font-size: clamp(1rem, 1vw, 2rem)
+    }
+
+    .img-container {
+        width: 60svw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 	

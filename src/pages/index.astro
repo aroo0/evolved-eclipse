@@ -131,7 +131,6 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 	.other-posts {
 		grid-area: 23 / 3 / span 1 / 14;
 		margin: 1rem 0;
-
 	}
 
 
@@ -139,15 +138,16 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 
 		.latest-post-text {
 		grid-area: 1 / 1 / span 1 / span 6;
-		margin: .7rem;
-		padding: .2rem .5rem;
+		font-size: .7rem;
+		margin: .8rem;
+		padding: .1rem .5rem;
 		background-color: #fff;
 		opacity: .8;
 		border-radius: .7rem;
 		color: #000;
 		justify-self: left;
 		z-index: 1;
-	}
+		}
 
 		.last-post__photo-wrapper {
 		grid-area: 1 / 1 / span 14 / 17;
@@ -164,11 +164,8 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 
 		.see-all-text {
 		grid-area: 26 / 3 / span 1 / 16;
-
+		}
 	}
-
-
-}
 
 	
 	@media (max-width: 700px) {
@@ -176,10 +173,8 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 
 		.last-post__photo-wrapper {
 			height: 400px;
-		
+	
 		}
-
-
 }
 
 	@media (max-width: 540px) {
@@ -205,20 +200,15 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 		.see-all-text {
 		grid-area: 26 / 3 / span 1 / 17;
 		padding-right: 1rem;
-
 	}
-
-
 }
 
 
 @media (max-width: 400px) {
 	.last-post__photo-wrapper {
 			height: 200px;
-
 		}
-
-}
+	}
 
 
 

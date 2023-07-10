@@ -22,13 +22,13 @@ function generatePageTitle(title) {
 		<!-- <script defer src="src/js/middleImageSizeFunction.js" type="text/javascript"></script> -->
 		<script defer>
 			window.addEventListener('DOMContentLoaded', function() {
-				const mainContainer = document.querySelector('main');
+				const mainContainer = document.body;
 				const graphicElement = document.querySelector('.middle-image-container');
 
 				function updateHeight() {
 					const mainHeight = mainContainer.offsetTop + mainContainer.offsetHeight;
 					const graphicContainerHeight = mainHeight - 528;
-					graphicElement.style.height = `${graphicContainerHeight + 95}px`;
+					graphicElement.style.height = `${graphicContainerHeight + 60}px`;
 				}
 
 				// Initial call to update the height
