@@ -165,14 +165,14 @@ li:has(p) > p {
 	font-size: clamp(.8rem, 1vw, .9rem);
 }
 
-a {
+a, a:focus, a:active  {
 	color: var(--dark);
 	text-decoration: underline;
 	text-underline-offset: 4px;
 
 }
 
-a:focus, a:hover, a:active {
+a :hover {
 	text-decoration: none;
 }
 
@@ -245,7 +245,7 @@ figure {
 	gap: .5rem
 }
 
-.button {
+.button, .button:active, .button:focus {
 	background-color: #000000;
 	color: #fff;
 	border-radius: 3rem;
@@ -256,7 +256,7 @@ figure {
     transition: background-color .1s ease-in-out;
 	font-weight: 400;
 
-	&:hover, :active, :focus {
+	&:hover {
 		color: #000;
 		border: 1px solid #000;
 		background-color: white;
@@ -301,22 +301,24 @@ table {
   }
   
 
-.data-footnote-backref {
+.data-footnote-backref, 
+.data-footnote-backref:active, 
+.data-footnote-backref:focus {
 	color: gray;
 	text-decoration: none;
 	font-size: .9rem;
 
-	&:hover, :active, :focus{
+	&:hover {
 		color: black
 	}
  }
   
-sup :is(a)  {
+sup :is(a, a:active, a:focus)  {
 	color: gray;
 	text-decoration: none;
 	font-size: .7rem;
 
-	&:hover, :active, :focus {
+	&:hover {
 		color: black
 	}
 
@@ -534,6 +536,10 @@ sup :is(a)  {
 
 		@media (max-width:430px) {
 
+			&.row-headline {
+				display: none;
+			}
+
 	
 			& .row-title {
 				grid-area: 2 / 1 / span  1 / 17;
@@ -646,11 +652,13 @@ sup :is(a)  {
 				display: grid;
 				grid-gap: 0.9rem 0;
 
-				& .lang-cell {
+				& .lang-cell, 
+				  .lang-cell:active, 
+				  .lang-cell:focus {
 					cursor: pointer;
 					transition: font-weight .1s ease-in-out;
 
-					&:hover, :active, :focus {
+					&:hover {
 						color: #6b6b6b;
 					}
 
@@ -866,30 +874,36 @@ sup :is(a)  {
         transition: background-color .2s ease-in-out;
 
 
-        &.black {
+        &.black, 
+		&.black:active, 
+		&.black:focus {
             color: #fff;
             border: 1px solid #fff;
 
-            &:hover, :active, :focus {
+            &:hover {
                 color: #000;
                 background-color: #fff;
             }
         }
-        &.white {
+        &.white, 
+		&.white:active, 
+		&.white:focus {
             border: 1px solid #000;
 
-            &:hover, :active, :focus {
+            &:hover {
                 color: #fff;
                 background-color: black;
             }
         }
 
-		&.black-filled {
+		&.black-filled, 
+		&.black-filled:active, 
+		&.black-filled:focus {
             border: 1px solid #000;
 			color: #fff;
 			background-color: #000;
 
-            &:hover, :active, :focus {
+            &:hover {
                 color: #000;
                 background-color: #fff;
             }

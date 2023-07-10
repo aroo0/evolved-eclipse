@@ -12,8 +12,8 @@ import {frontmatter} from '../info/about-data.md'
 		<span class="bar"></span>
 		</div>
 	<nav class='header__main-nav'>
-		<HeaderLink class="nav_link" href="/blog">Blog</HeaderLink>
 		<HeaderLink class="nav_link" href="/about">About</HeaderLink>
+		<HeaderLink class="nav_link" href="/blog">Blog</HeaderLink>
 		<HeaderLink class="nav_link" href="/projects-writings">Project/Writings</HeaderLink>
 		<HeaderLink class="nav_link" href="/subscribe">Subscribe</HeaderLink>
 		<a class="nav_link" href={frontmatter.twitterLink} target="_blank">Twitter.</a>
@@ -65,15 +65,17 @@ import {frontmatter} from '../info/about-data.md'
 	
 	function handleResize() {
 	const windowWidth = window.innerWidth;
+	const windowHeight = window.innerHeight
 	const thresholdWidth = 1000;
+	const minHeight = 530;
 
-	if (windowWidth <= thresholdWidth) {
+	if ((windowWidth <= thresholdWidth) && (windowHeight > minHeight)) {
 		const container = document.getElementById('dogo-container');
 		// Create the container and image if it doesn't exist
 		if (!container) {
 			const container = document.createElement('div');
 
-			container.style.width = '65vw';
+			container.style.width = '50vw';
 			container.style.alignSelf = 'flex-start';
 			container.style.marginTop = 'auto';
 			container.style.marginBottom = '1rem';

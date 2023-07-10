@@ -45,6 +45,13 @@ const slug = Astro.props.data.slug
                     max-width: 90%;
                     display: flex;
                     flex-direction: column;
+
+
+                    @media (max-width: 600px) {
+                        & {
+                            max-width: initial;
+                        }
+                    }
                 }
 
         & hr {
