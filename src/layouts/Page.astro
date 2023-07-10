@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE } from '../consts';
 
-const {title, description, img='/minas-mongrel-pyramid.jpg' } = Astro.props
+const {title, description, img='minas-mongrel-pyramid.jpg' } = Astro.props
 
 function generatePageTitle(title) {
   return title === SITE_TITLE ? title : title + " | " + SITE_TITLE;
