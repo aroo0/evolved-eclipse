@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { formattedDate } from "../js/DateFunction";
+import { useState, useEffect } from "react";
+import { formattedDate } from "../../js/DateFunction";
+import XMark from '../icons/XMark'
+
 
 interface Post {
   slug: string;
@@ -60,7 +62,7 @@ export default function PostTable({ posts }: PostTableProps) {
       <div className="selected-tags-container tags">
         {selectedTags.map((tag) => (
           <span key={tag} className="selected-tag tag black-filled" onClick={() => handleTagRemove(tag)}>
-            {tag} &#128937;
+            {tag} <XMark />
           </span>
         ))}
       </div>

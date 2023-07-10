@@ -872,6 +872,11 @@ sup :is(a, a:active, a:focus)  {
         border-radius: .6em;
         transition: color .2s ease-in-out;
         transition: background-color .2s ease-in-out;
+		display: flex;
+		align-items: center;
+		gap: 0.3rem;
+
+;
 
 
         &.black, 

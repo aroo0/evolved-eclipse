@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import projectsData from '../info/projects-data.json';
-import ArowIcon from './ArowIcon'
+import { useState } from "react";
+import projectsData from '../../info/projects-data.json';
+import ArowIcon from '../icons/ArowIcon'
 
 interface Project {
   id: number;
