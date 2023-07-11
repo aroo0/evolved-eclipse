@@ -26,7 +26,6 @@ ul {
   	padding-left: .2rem;
 }
 
-
 html {
 	font-family: 'Inter', sans-serif;
 	height: 100%;
@@ -34,8 +33,6 @@ html {
 	background-color: var(--light);
 	color: var(--dark);
 	overflow-x: hidden;
-
-
 }
 
 body {
@@ -47,13 +44,7 @@ body {
 
 .fixed {
 	position: fixed;
-
-
 }
-
-
-
-
 
 .container {
 	display: flex;
@@ -61,7 +52,6 @@ body {
 	margin: auto;
 	
 }
-
 
 main {
 	margin: 0 auto;
@@ -72,19 +62,7 @@ main {
 	line-height: 1.5;
 	max-width: 93rem;
 	min-height: 75vh;
-
 }
-
-
-
-/* @media (max-width: 93rem) {
-
-	main {
-		margin:  0 3rem;
-
-	}
-
-} */
 
 @media (max-width: 1000px) {
 
@@ -92,11 +70,7 @@ main {
 		padding-top: calc(80px)
 
 	}
-
 }
-
-
-
 
 .content-wrapper {
 	display: grid;
@@ -106,8 +80,6 @@ main {
 	margin-bottom: clamp(1rem 3vw, 5rem)
 
 }
-
-
 
 h1, h2, h3, h4 {
 	font-family: 'Lora', 'Times New Roman', Times, serif;
@@ -169,16 +141,13 @@ a {
 	color: var(--dark);
 	text-decoration: underline;
 	text-underline-offset: 4px;
-
 }
 
-
 @media (hover: hover) {
-	a :hover {
+	a:hover {
 		text-decoration: none;
 	}
 }
-
 
 textarea {
 	width: 100%;
@@ -187,7 +156,6 @@ textarea {
 input {
 	font-size: 16px;
 }
-
 
 img {
 	max-width: 100%;
@@ -224,8 +192,9 @@ figure {
 			} 
 		}
 	}
+}
 
-	& figcaption {
+ figcaption, .photo-desccription-as-p {
 		color: #3C3C3C;
 		font-size: .75rem;
 		padding-bottom: .6rem;
@@ -240,6 +209,10 @@ figure {
 
 		}
 	}
+
+.photo-desccription-as-p {
+	margin-top: -1rem;
+
 }
 
 .tags {
@@ -279,8 +252,6 @@ figure {
 	font-size:  clamp(1rem, 2vw, 1.5rem);
 	letter-spacing: 1px;
 }
-
-
 /* Table */
 
 table {
@@ -334,7 +305,6 @@ sup :is(a, a:active, a:focus)  {
 	&:after {
 		content: ']';
 	}
-
 	&:before {
 		content: '[';
 	}
@@ -473,14 +443,14 @@ sup :is(a, a:active, a:focus)  {
 				font-size: .8rem;
 
 
-		} }
+		} 
+	}
 
 		& hr {
 			grid-area: 2 / 3 /  3 / 15;
 			border-bottom: 1px solid rgb(122, 122, 122);
 			border-top: none;
 		}
-
 
 		@media (max-width:1000px) {
 
@@ -503,18 +473,13 @@ sup :is(a, a:active, a:focus)  {
 			& hr {
 				grid-area: 2 / 1 /  3 / 17;
 			}
-
 		}
 
 		@media (max-width:600px) {
 
-			
 			& .headline {
 				line-height: 1.5;
 			}
-
-
-
 
 			& .row-title {
 				grid-area: 1 / 1 / span  1 / 13;
@@ -524,8 +489,6 @@ sup :is(a, a:active, a:focus)  {
 				grid-area: 2 / 1 /  span 1 / 17;
 				margin-bottom: .8rem;
 				margin-top: 3px;
-
-
 			}
 			
 			& .row-date {
@@ -541,7 +504,6 @@ sup :is(a, a:active, a:focus)  {
 				display: block;
 				border-bottom: 1px solid rgb(242, 240, 240);
 				border-top: none;
-
 			}
 
 		}
@@ -556,7 +518,6 @@ sup :is(a, a:active, a:focus)  {
 			& .row-tags {
 				grid-area: 3 / 1 /  span 1 / 17;
 				margin-bottom: .8rem;
-
 			}
 			
 			& .row-date {
@@ -572,19 +533,13 @@ sup :is(a, a:active, a:focus)  {
 				display: block;
 				border-bottom: 1px solid rgb(242, 240, 240);
 				border-top: none;
-
 			}
 
 			& .headline {
 				height: 20px;
 			}
-
-
 		}
 	}
-
-
-
 
 	.blog-page-wrapper {
 		gap: 1.9rem 0;
@@ -597,13 +552,13 @@ sup :is(a, a:active, a:focus)  {
 		& .post-table {
 			grid-area: 3 / 1 /  span 1 / 17;
 
-			@media (max-width:430px) {
+		@media (max-width:430px) {
 
-				& .row-headline {
-					display: none;
-				}
+			& .row-headline {
+				display: none;
 			}
 		}
+	}
 	
 		& #search {
 			grid-area: 1 / 3 /  span 1 / 15;
@@ -625,17 +580,12 @@ sup :is(a, a:active, a:focus)  {
 			}
 		}
 		
-			@media (max-width:600px) {
-				& {
-					margin: 1rem;
-				}
-
-				
-
+		@media (max-width:600px) {
+			& {
+				margin: 1rem;
+			}
+		}
 	}
-}
-
-
 
 	/* Projects Table */
 
@@ -707,8 +657,6 @@ sup :is(a, a:active, a:focus)  {
 			line-height: 1.5;
 			
 		}
-
-		
 	
 		& .projects-row-title {
 			grid-area: 1 / 1 / span 1 / span 7;
@@ -724,8 +672,6 @@ sup :is(a, a:active, a:focus)  {
 		& .projects-row-date {
 			grid-area: 1 / 15 / span 1 / span 3;
 				}
-
-
 
 
 		@media (max-width: 1000px) {
@@ -756,63 +702,53 @@ sup :is(a, a:active, a:focus)  {
 			& .table-main {
 				grid-area: 2 / 1 /  span 2 / span 10;
 			}
-
 		}
 
+		@media (max-width: 820px) {
 
-			@media (max-width: 820px) {
+			& .headline {
+				line-height: 1;
+					}
 
-				& .headline {
-					line-height: 1;
-				}
+			& .row {
+				gap: .6rem .5rem
+					}
+
+			& .project-writings-hr {
+				grid-area: 3 / 1 / span 1 / span 17;
+					}
+
+			& .in-project-line {
+				grid-area: 3 / 1 / span 1 / span 17;
+				padding-top: .2rem;
+				display: block;
+				border: none;
+				border-bottom: 1px solid rgb(242, 240, 240);
+				border-top: none;
+
+					}
+			& .projects-row-title {
+				grid-area: 1 / 1 / span 1 / span 12;
+					}
+					
+			& .projects-row-publisher {
+				grid-area: 2 / 1 / span 1 / span 12;
+					}
 	
-				& .row {
-					gap: .6rem .5rem
-				}
+			& .projects-row-media {
+				grid-area: 2 / 13 / span 1 / 17;
+				text-align: right;
 
-				& .project-writings-hr {
-					grid-area: 3 / 1 / span 1 / span 17;
-						}
+					}
+			& .projects-row-date {
+				grid-area: 1 / 13 / span 1 / 17;
+				text-align: right;
 
-				& .in-project-line {
-					grid-area: 3 / 1 / span 1 / span 17;
-					padding-top: .2rem;
-					display: block;
-					border: none;
-					border-bottom: 1px solid rgb(242, 240, 240);
-					border-top: none;
-
-				}
-
-
-				& .projects-row-title {
-					grid-area: 1 / 1 / span 1 / span 12;
-						}
-						
-				& .projects-row-publisher {
-					grid-area: 2 / 1 / span 1 / span 12;
-						}
-		
-				& .projects-row-media {
-					grid-area: 2 / 13 / span 1 / 17;
-					text-align: right;
-
-						}
-				& .projects-row-date {
-					grid-area: 1 / 13 / span 1 / 17;
-					text-align: right;
-
-						}
-
-		}
-
-		
-
+					}
+			}
 		
 		@media (max-width: 600px) {
-
-			
-
+	
 			& .projects-row-title {
 				grid-area: 1 / 1 / span 1 / span 11;
 					}
@@ -831,10 +767,8 @@ sup :is(a, a:active, a:focus)  {
 				text-align: right;
 
 					}
+			}
 
-		}
-
-		
 		@media (max-width: 500px) {
 
 			& .row{
@@ -852,7 +786,6 @@ sup :is(a, a:active, a:focus)  {
 				border: none;
 				border-bottom: 1px solid rgb(242, 240, 240);
 				border-top: none;
-
 			}
 
 			& .projects-row-title {
@@ -873,14 +806,9 @@ sup :is(a, a:active, a:focus)  {
 				text-align: left;
 
 					}
-
-		}
-
-	}
-
-		
+				}
+			}
 	
-
 
 	/* TAGS */
 
@@ -896,9 +824,6 @@ sup :is(a, a:active, a:focus)  {
 		display: flex;
 		align-items: center;
 		gap: 0.3rem;
-
-;
-
 
         &.black, 
 		&.black:active, 
