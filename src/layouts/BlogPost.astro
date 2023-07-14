@@ -9,6 +9,7 @@ import Tag from '../components/Tag.astro';
 import RelatedPosts from '../components/RelatedPosts.astro'
 import Subscribe from '../components/SubscribeComponent.astro';
 import { Image } from 'astro:assets';
+import { SITE_TITLE } from '../consts';
 
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -32,7 +33,7 @@ const isThereRelated = relatedPosts.length > 0
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={coverImage} />
+		<BaseHead title={`${title} | ${SITE_TITLE}`} description={description} image={coverImage} />
 	</head>
 	<body>
 		<div>
