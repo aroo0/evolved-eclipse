@@ -1,7 +1,7 @@
 ---
 import Page from "../layouts/Page.astro";
-import Subscribe from '../components/SubscribeComponent.astro';
 import {Content, frontmatter} from '../info/about-data.md'
+import SubscribeComp from "../components/reactComponents/SubscribeComp";
 import pyramid from '../assets/minas-mongrel-pyramid.webp'
 import { Image } from "astro:assets";
 
@@ -36,7 +36,7 @@ const metaData = {
 	
 	</div>
 
-	<Subscribe />
+	<SubscribeComp client:visible />
 	
 	
 

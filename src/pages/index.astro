@@ -8,12 +8,12 @@ import Page from '../layouts/Page.astro';
 import OtherPost from '../components/OtherPost.astro';
 import Tag from "../components/Tag.astro";
 import FormattedDate from '../components/FormattedDate.astro';
-import Subscribe from '../components/SubscribeComponent.astro';
+import SubscribeComp from '../components/reactComponents/SubscribeComp';
 
 
 
 const latestPosts = await getCollection('blog', ({ data }) => {
-  return data.isDraft !== true; })
+  return data.isDraft !== true; }) 
 
 // Assuming the `getCollection` function returns a Promise of an array of posts
 latestPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -58,7 +58,7 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 	</section>
 	<span class="see-all-text"><a class='button button--small' href={`/blog`}>See all</a></span>
 </div>
-<Subscribe />
+<SubscribeComp client:visible  />
 
 </Page>
 

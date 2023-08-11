@@ -222,6 +222,7 @@ figure {
 }
 
 .button {
+	cursor: pointer;
 	background-color: #000000;
 	color: #fff;
 	border-radius: 3rem;
@@ -251,6 +252,11 @@ figure {
 	padding: 2em 4em;
 	font-size:  clamp(1rem, 2vw, 1.5rem);
 	letter-spacing: 1px;
+}
+
+.button-disabled {
+	opacity: .5;
+	cursor: default;
 }
 /* Table */
 
@@ -869,4 +875,64 @@ sup :is(a, a:active, a:focus)  {
 
 
 
+	/* Subscribe component */
 	
+	.subscribe-container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 3.75rem;
+
+
+& form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.9rem;
+
+
+
+}
+
+& input {
+		border: none;
+		border-bottom: 1px solid #000;
+		font-size: clamp(1rem, 1.2vw, 1.25rem);
+		padding: .7rem 1rem;
+		width: clamp(15rem, 20vw, 40rem);
+
+		
+
+}
+
+& .subscribe__input-container {
+		display: flex;
+		flex-direction: column;
+		gap:.5rem;
+		justify-items: center;
+		
+	}
+
+& .response {
+	font-size: .8rem;
+	height: .8rem;
+	padding-left: .8rem;
+
+}
+
+
+				
+@media (max-width: 1000px) {
+				& form {
+						flex-direction: column;
+				}
+
+				& input {
+						width: 80vw
+						
+				}
+				
+		}
+
+}
+

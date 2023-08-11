@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Tag from '../components/Tag.astro';
 import RelatedPosts from '../components/RelatedPosts.astro'
-import Subscribe from '../components/SubscribeComponent.astro';
+import SubscribeComp from "../components/reactComponents/SubscribeComp";
 import { Image } from 'astro:assets';
 import { SITE_TITLE } from '../consts';
 
@@ -90,7 +90,7 @@ const isThereRelated = relatedPosts.length > 0
 
 				</div>}
 			<div class='subscribe-container'>
-				<Subscribe />
+				<SubscribeComp client:visible />
 			</div>
 			</aside>
 		</main>
@@ -457,7 +457,7 @@ aside {
 		bottom: 0;
 		left: 0;
 		z-index: 100;
-		background-image: url('/bottom-tower-min.png');
+		background-image: url('/web-graph-elements/bottom-tower-min.png');
 		width: 411px;
 		height: 1368px;
 
@@ -471,7 +471,7 @@ aside {
 		top: 33rem;
 		left: 0;
 		z-index: 100;
-		background-image: url('/MiddleTower-min.png');
+		background-image: url('/web-graph-elements/MiddleTower-min.png');
 		width: 300px;
 		height: 1658px;
 

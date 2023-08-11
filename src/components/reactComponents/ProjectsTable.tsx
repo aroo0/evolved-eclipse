@@ -14,7 +14,6 @@ interface Project {
 
 type Language = "ALL" | "pl" | "en";
 
-
 export default function ProjectsTable() {
   const projects: Project[] = projectsData;
   const [selectedLanguage, setSelectedLanguage] = useState<Language>("ALL");
