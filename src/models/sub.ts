@@ -1,5 +1,5 @@
-import { Schema, model, models } from 'mongoose';
-
+import mongoose from 'mongoose';
+const { Schema, models, model } = mongoose;
 
 const SubAccountSchema = new Schema({
     email: {
