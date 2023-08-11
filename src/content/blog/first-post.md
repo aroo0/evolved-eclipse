@@ -1,6 +1,6 @@
 ---
 title: "Post-Humanism and the Ethics of Transcendence"
-isDraft: false
+isDraft: true
 description: "Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea purus amet. Tellus molestie nunc non massa."
 pubDate: "Jul 22 2022"
 coverImage: "../../assets/nebula-angela-stout.jpg"
