@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "postbuild": "pagefind --source .vercel/output/static --bundle-dir pagefind",
+    "postbuild": "pagefind --source .vercel/output/dist --bundle-dir pagefind",
     "preview": "astro preview",
     "astro": "astro"
   },
