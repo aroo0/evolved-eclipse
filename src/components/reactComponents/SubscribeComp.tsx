@@ -2,6 +2,9 @@ import { attachToResponse } from "astro/dist/core/cookies";
 import React from "react";
 import { useState } from "react"
 
+export const prerender = false;
+
+
 const SubscribeComp: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [value, setValue] = useState("")
