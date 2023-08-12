@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="astro-QO5XHE7C">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/web-graph-elements/favicon.png">
+<meta name="generator" content="Astro v2.10.7">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://minasmongrel.xyz/">
+
+<!-- Primary Meta Tags -->
+<title>Minas Mongrel</title>
+<meta name="title" content="Minas Mongrel">
+<meta name="description" content="Hi, I’m Patrick Leftwich, a researcher, writer and translator based in Cracow, Poland, and Minas Mongrel is my personal blog and website.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://minasmongrel.xyz/">
+<meta property="og:title" content="Minas Mongrel">
+<meta property="og:description" content="Hi, I’m Patrick Leftwich, a researcher, writer and translator based in Cracow, Poland, and Minas Mongrel is my personal blog and website.">
+<meta property="og:image" content="https://minasmongrel.xyz/web-graph-elements/minas-mongrel-pyramid-og_image.webp">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://minasmongrel.xyz/">
+<meta property="twitter:title" content="Minas Mongrel">
+<meta property="twitter:description" content="Hi, I’m Patrick Leftwich, a researcher, writer and translator based in Cracow, Poland, and Minas Mongrel is my personal blog and website.">
+<meta property="twitter:image" content="https://minasmongrel.xyz/web-graph-elements/minas-mongrel-pyramid-og_image.webp">
+
+
+<!-- Pagefind -->
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script defer src="/pagefind/pagefind-ui.js" type="text/javascript"></script>
+
+		<script defer>
+			window.addEventListener('DOMContentLoaded', function() {
+				const mainContainer = document.body;
+				const graphicElement = document.querySelector('.middle-image-container');
+
+				function updateHeight() {
+					const mainHeight = mainContainer.offsetTop + mainContainer.offsetHeight;
+					const graphicContainerHeight = mainHeight - 528;
+					graphicElement.style.height = `${graphicContainerHeight + 60}px`;
+				}
+
+				// Initial call to update the height
+				updateHeight();
+
+				// Call updateHeight() whenever the window is resized
+				window.addEventListener('resize', updateHeight);
+			});
+		</script>
+	<link rel="stylesheet" href="/_astro/_...slug_.abf41534.css" />
+<link rel="stylesheet" href="/_astro/_...slug_.f457e5bc.css" />
+<link rel="stylesheet" href="/_astro/index.b9973bae.css" />
+<link rel="stylesheet" href="/_astro/404.ad9cc842.css" /></head>
+
+	<body class="astro-QO5XHE7C">
+
+		<div class="astro-QO5XHE7C">
+		<header class="astro-3EF6KSR2">
+	<div class="header__container astro-3EF6KSR2">
+		<a class="header__logo astro-3EF6KSR2" href="/">
+			<img src="/_astro/logo_black_crop.a631dca6_Z1IPJvv.webp" alt="logo" class="astro-3EF6KSR2" width="374" height="108" loading="lazy" decoding="async"></a>
+	<div class="hamburger-menu astro-3EF6KSR2">
+		<span class="bar astro-3EF6KSR2"></span>
+		</div>
+	<nav class="header__main-nav astro-3EF6KSR2">
+		<a href="/about" class="nav_link astro-3EF6KSR2 astro-EIMMU3LG">
+	About
+</a>
+		<a href="/blog" class="nav_link astro-3EF6KSR2 astro-EIMMU3LG">
+	Blog
+</a>
+		<a href="/projects-writings" class="nav_link astro-3EF6KSR2 astro-EIMMU3LG">
+	Project/Writings
+</a>
+		<a href="/subscribe" class="nav_link astro-3EF6KSR2 astro-EIMMU3LG">
+	Subscribe
+</a>
+		<a class="nav_link astro-3EF6KSR2" href="http://twitter.com" target="_blank">Twitter.</a>
+	</nav>
+
+	</div>
+	<img src="/_astro/circle-top-edited.4c403db0_1YbTvS.webp" class="top-image astro-3EF6KSR2" alt="fosiil" width="380" height="903" loading="lazy" decoding="async"></header>
+
+<script defer>
+	// Hamburger menu
+
+	const hamburgerMenu = document.querySelector('.hamburger-menu') 
+	const navLinks = document.querySelector('.header__main-nav')
+	const body = document.body;
+	const header = document.querySelector('.header__container')
+
+	hamburgerMenu.addEventListener('click', () => {
+		const scrollY = window.scrollY;
+		hamburgerMenu.classList.toggle('is-open')
+		navLinks.classList.toggle('hidden')
+		body.classList.toggle('fixed')
+
+		if (body.classList.contains('fixed')) {
+			body.style.top = `-${scrollY}px`;
+		} else {
+			const scrollY = parseInt(body.style.top || '0') * -1;
+			body.style.position = '';
+			body.style.top = '';
+			window.scrollTo(0, scrollY);
+			}
+		}
+	)
+
+	// Hide header while scrolling
+
+	let prevScrollpos = window.scrollY;
+	window.onscroll = function() {
+		let currentScrollPos = window.scrollY;
+		if ((prevScrollpos < currentScrollPos) && (currentScrollPos > 200)) {
+			header.style.top = "-90px";
+		} else {
+			header.style.top = "-0";
+		}
+		prevScrollpos = currentScrollPos;
+	}
+
+	// Dogo graphics in menu
+	
+	function handleResize() {
+	const windowWidth = window.innerWidth;
+	const windowHeight = window.innerHeight
+	const thresholdWidth = 1000;
+	const minHeight = 530;
+
+	if ((windowWidth <= thresholdWidth) && (windowHeight > minHeight)) {
+		const container = document.getElementById('dogo-container');
+		// Create the container and image if it doesn't exist
+		if (!container) {
+			const container = document.createElement('div');
+
+			container.style.width = '50vw';
+			container.style.alignSelf = 'flex-start';
+			container.style.marginTop = 'auto';
+			container.style.marginBottom = '1rem';
+
+			container.id = 'dogo-container';
+
+			const img = new Image();
+			img.src = '/web-graph-elements/dogo.webp';
+			img.alt ='dogo'
+			img.width = '500'
+			img.height='538'
+			img.loading = 'lazy'
+			img.decoding = 'async'
+
+			container.appendChild(img);
+			navLinks.appendChild(container);
+				}
+		} else {
+			const container = document.getElementById('dogo-container');
+			// Remove the container if it exists
+			if (container) {
+			container.remove();
+			}
+		}
+	}
+	// Initial check
+	handleResize();
+	// Add event listener for window resizing
+	window.addEventListener('resize', handleResize);
+
+
+</script>
+		<main class="astro-QO5XHE7C">
+            
+
+
+	<div class="landing-posts astro-J7PV25F6" data-pagefind-ignore>
+		<span class="helper-headline latest-post-text astro-J7PV25F6">Latest Posts</span>
+		<div class="last-post__photo-wrapper astro-J7PV25F6">
+			<img src="/_astro/original_571001cccc2468fb1a8a84e2e8edce0f.1d43cd3d_1DP0bR.webp" data-pagefind-meta="image[src], image_alt[alt]" alt="description" loading="eager" class="astro-J7PV25F6" width="1100" height="800" decoding="async">
+		</div>
+		<div class="last-post__content-container astro-J7PV25F6">
+			<div class="headline-container astro-J7PV25F6">
+				<span class="date astro-J7PV25F6">
+					<time datetime="2023-07-09T22:00:00.000Z">
+	Jul 10, 2023
+</time>
+				</span>
+				<a href="/blog/6/" class="astro-J7PV25F6"><h2 class="astro-J7PV25F6">Building Resilience: microbes and people, a common cause</h2></a>
+			</div>
+			<hr class="astro-J7PV25F6">
+			<a href="/blog/6/" class="astro-J7PV25F6"><span class="description astro-J7PV25F6">
+				In the evolving tapestry of our world, the effects and spatial consequences of change unveil a profound dance between human influence and the interconnectedness of existence.
+			</span></a>
+			<div class="tags astro-J7PV25F6">
+				<a class="tag black astro-BLWJYJPT" href="/blog?tag=Solarpunk">Solarpunk</a><a class="tag black astro-BLWJYJPT" href="/blog?tag=Utopia">Utopia</a><a class="tag black astro-BLWJYJPT" href="/blog?tag=Agriculture">Agriculture</a>
+			</div>
+		</div>
+
+		<section class="other-posts astro-J7PV25F6" data-pagefind-ignore>
+		<article class="other-post content-container astro-GSTJUZEM">
+    <div class="headline-container astro-GSTJUZEM">
+    <span class="date astro-GSTJUZEM">
+        <time datetime="2023-07-09T22:00:00.000Z">
+	Jul 10, 2023
+</time>
+    </span>
+    <a href="/blog/first/" class="astro-GSTJUZEM"><h3 class="astro-GSTJUZEM">Building Resilience: microbes and people, a common cause</h3></a>
+    </div>
+    <hr class="hr_title astro-GSTJUZEM">
+    <a href="/blog/first/" class="astro-GSTJUZEM"><span class="description astro-GSTJUZEM">
+        In the evolving tapestry of our world, the effects and spatial consequences of change unveil a profound dance between human influence and the interconnectedness of existence.
+    </span></a>
+    <div class="tags astro-GSTJUZEM">
+        <a class="tag white astro-BLWJYJPT" href="/blog?tag=Solarpunk">Solarpunk</a><a class="tag white astro-BLWJYJPT" href="/blog?tag=Utopia">Utopia</a><a class="tag white astro-BLWJYJPT" href="/blog?tag=Agriculture">Agriculture</a>
+    </div>
+</article>
+<hr class="post-divider astro-GSTJUZEM">
+		<article class="other-post content-container astro-GSTJUZEM">
+    <div class="headline-container astro-GSTJUZEM">
+    <span class="date astro-GSTJUZEM">
+        <time datetime="2023-06-11T22:00:00.000Z">
+	Jun 12, 2023
+</time>
+    </span>
+    <a href="/blog/5/" class="astro-GSTJUZEM"><h3 class="astro-GSTJUZEM"> Cultivating Peace and Presence in Everyday Life</h3></a>
+    </div>
+    <hr class="hr_title astro-GSTJUZEM">
+    <a href="/blog/5/" class="astro-GSTJUZEM"><span class="description astro-GSTJUZEM">
+        In the evolving tapestry of our world, the effects and spatial consequences of change unveil a profound dance between human influence and the interconnectedness of existence.
+    </span></a>
+    <div class="tags astro-GSTJUZEM">
+        <a class="tag white astro-BLWJYJPT" href="/blog?tag=Utopia">Utopia</a><a class="tag white astro-BLWJYJPT" href="/blog?tag=Agriculture">Agriculture</a><a class="tag white astro-BLWJYJPT" href="/blog?tag=Alchemy">Alchemy</a>
+    </div>
+</article>
+<hr class="post-divider astro-GSTJUZEM">
+		<article class="other-post content-container astro-GSTJUZEM">
+    <div class="headline-container astro-GSTJUZEM">
+    <span class="date astro-GSTJUZEM">
+        <time datetime="2023-05-21T22:00:00.000Z">
+	May 22, 2023
+</time>
+    </span>
+    <a href="/blog/shortpost/" class="astro-GSTJUZEM"><h3 class="astro-GSTJUZEM">In the evolving tapestry of our world</h3></a>
+    </div>
+    <hr class="hr_title astro-GSTJUZEM">
+    <a href="/blog/shortpost/" class="astro-GSTJUZEM"><span class="description astro-GSTJUZEM">
+        In the evolving tapestry of our world, the effects and spatial consequences of change unveil a profound dance between human influence and the interconnectedness of existence.
+    </span></a>
+    <div class="tags astro-GSTJUZEM">
+        <a class="tag white astro-BLWJYJPT" href="/blog?tag=Character">Character</a><a class="tag white astro-BLWJYJPT" href="/blog?tag=Nose">Nose</a><a class="tag white astro-BLWJYJPT" href="/blog?tag=Tech">Tech</a>
+    </div>
+</article>
+
+
+	</section>
+	<span class="see-all-text astro-J7PV25F6"><a class="button button--small astro-J7PV25F6" href="/blog">See all</a></span>
+</div>
+
+		</main>
+		<footer class="astro-SZ7XMLTE">
+	⫘⫘⫘  2023  // <a href="/rss.xml" target="_blank" class="astro-SZ7XMLTE">Subscribe to RSS</a> ⫘⫘⫘
+</footer>
+		</div>
+	<div class="middle-image-container astro-QO5XHE7C">
+	</div>
+</body></html>
