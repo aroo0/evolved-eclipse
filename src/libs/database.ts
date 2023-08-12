@@ -1,5 +1,8 @@
 import mongoose from 'mongoose';
 
+export const prerender = false;
+
+
 let isConnected: boolean = false; // track the connection
 
 export const connectToDB = async () => {

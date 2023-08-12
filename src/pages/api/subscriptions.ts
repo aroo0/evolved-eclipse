@@ -2,6 +2,9 @@ import type { APIRoute } from "astro";
 import { connectToDB } from "../../libs/database"
 import SubAccount from "../../models/sub";
 
+export const prerender = false;
+
+
 export const post: APIRoute = async ({ request }) => {
   try {
     await connectToDB();

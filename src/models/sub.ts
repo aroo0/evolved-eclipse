@@ -1,6 +1,11 @@
 import mongoose from 'mongoose';
 const { Schema, models, model } = mongoose;
 
+
+export const prerender = false;
+
+
+
 const SubAccountSchema = new Schema({
     email: {
         type: String,
