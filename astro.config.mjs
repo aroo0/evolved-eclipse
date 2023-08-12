@@ -3,14 +3,11 @@ import mdx from '@astrojs/mdx';
 import remarkGfm from 'remark-gfm';
 import sitemap from '@astrojs/sitemap';
 import react from "@astrojs/react";
-
-import netlify from "@astrojs/netlify/functions";
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://minasmongrel.xyz/',
-  output: 'server',
-  adapter: netlify(),
   integrations: [mdx(), sitemap(), react()],
   experimental: {
     assets: true
