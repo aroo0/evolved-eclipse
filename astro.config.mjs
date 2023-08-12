@@ -8,8 +8,8 @@ import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://unrivaled-empanada-3b13a7.netlify.app/',
-  output: 'hybrid',
+  site: 'https://minasmongrel.xyz/',
+  output: 'server',
   adapter: node({
     mode: "standalone"
   }),
