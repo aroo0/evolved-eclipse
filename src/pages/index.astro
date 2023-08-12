@@ -8,7 +8,6 @@ import Page from '../layouts/Page.astro';
 import OtherPost from '../components/OtherPost.astro';
 import Tag from "../components/Tag.astro";
 import FormattedDate from '../components/FormattedDate.astro';
-import SubscribeComp from '../components/reactComponents/SubscribeComp';
 
 
 
@@ -58,8 +57,6 @@ const { title, pubDate, description, tags, coverImage, coverAlt } = lastPost.dat
 	</section>
 	<span class="see-all-text"><a class='button button--small' href={`/blog`}>See all</a></span>
 </div>
-<SubscribeComp client:visible  />
-
 </Page>
 
 

@@ -9,7 +9,7 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://minasmongrel.xyz/',
-  output: 'server',
+  output: 'hybrid',
   adapter: node({
     mode: "standalone"
   }),
