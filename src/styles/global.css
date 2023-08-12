@@ -255,8 +255,14 @@ figure {
 }
 
 .button-disabled {
-	opacity: .5;
+	color: #000;
+	background-color: #fff;
 	cursor: default;
+}
+
+.input-disabled {
+	background-color: #fff;
+	
 }
 /* Table */
 

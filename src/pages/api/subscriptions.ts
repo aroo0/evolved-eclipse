@@ -32,7 +32,7 @@ export const post: APIRoute = async ({ request }) => {
 
     return new Response(
       JSON.stringify({
-        message: "Email already exist in db."
+        message: "Email already exist. ༶ඬ༝ඬ༶"
       }),
       { status: 409 }
     );

@@ -9,7 +9,10 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://unrivaled-empanada-3b13a7.netlify.app/',
-  output: 'static',
+  output: 'hybrid',
+  adapter: node({
+    mode: "standalone"
+  }),
   integrations: [mdx(), sitemap(), react()],
   experimental: {
     assets: true

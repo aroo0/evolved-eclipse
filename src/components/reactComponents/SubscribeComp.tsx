@@ -2,6 +2,8 @@ import { attachToResponse } from "astro/dist/core/cookies";
 import React from "react";
 import { useState } from "react"
 
+export const prerender = false;
+
 const SubscribeComp: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [value, setValue] = useState("")
@@ -53,10 +55,11 @@ const SubscribeComp: React.FC = () => {
           <input 
             value={value}
             onChange={onChange}
-            className="add-email" 
+            className={`${isLoading && "input-disabled"}`}
             placeholder="Email" 
             type="email"
-            required />
+            required
+            disabled={isLoading} />
           <div className="response">
             {response}
           </div>
