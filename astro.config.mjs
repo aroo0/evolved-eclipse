@@ -8,6 +8,10 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://minasmongrel.xyz/',
+  output: 'hybrid',
+  adapter: node({
+    mode: "standalone"
+  }),
   integrations: [mdx(), sitemap(), react()],
   experimental: {
     assets: true
