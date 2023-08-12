@@ -3,15 +3,14 @@ import mdx from '@astrojs/mdx';
 import remarkGfm from 'remark-gfm';
 import sitemap from '@astrojs/sitemap';
 import react from "@astrojs/react";
-import node from "@astrojs/node";
 
-import vercel from "@astrojs/vercel/serverless";
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://minasmongrel.xyz/',
   output: 'hybrid',
-  adapter: vercel(),
+  adapter: netlify(),
   integrations: [mdx(), sitemap(), react()],
   experimental: {
     assets: true

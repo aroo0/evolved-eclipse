@@ -1,5 +1,8 @@
 # build output
 dist/
+.netlify/
+.vercel/
+
 # generated types
 .astro/
 
