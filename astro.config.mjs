@@ -9,7 +9,7 @@ import netlify from "@astrojs/netlify/functions";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://minasmongrel.xyz/',
-  output: 'hybrid',
+  output: 'server',
   adapter: netlify(),
   integrations: [mdx(), sitemap(), react()],
   experimental: {
